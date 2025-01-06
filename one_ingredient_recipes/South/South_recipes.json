@@ -1,0 +1,186 @@
+[
+    {
+        "RecipeName": "Dosa",
+        "Ingredients": "Rice, Urad dal, Water, Salt",
+        "BriefInstructions": [
+            "Step 1: Soak rice and dal.",
+            "Step 2: Grind the soaked rice and dal.",
+            "Step 3: Ferment the mixture.",
+            "Step 4: Cook the batter on a hot griddle."
+        ],
+        "Category": "Dinner",
+        "HealthinessPercentage": 70,
+        "Suggestion": "Use less oil for a healthier version.",
+        "ImageSource": "https://www.daringgourmet.com/wp-content/uploads/2023/06/Dosa-Recipe-3.jpg"
+    },
+    {
+        "RecipeName": "Rasam",
+        "Ingredients": "Tomato, Tamarind, Spices, Coriander leaves",
+        "BriefInstructions": [
+            "Step 1: Prepare a tangy tamarind extract.",
+            "Step 2: Add chopped tomatoes and spices.",
+            "Step 3: Cook until the soup thickens.",
+            "Step 4: Garnish with coriander leaves and serve hot."
+        ],
+        "Category": "Dinner",
+        "HealthinessPercentage": 80,
+        "Suggestion": "Add less salt or sugar for a healthier option.",
+        "ImageSource": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzlDV0R3jbrAm3fL4jOWpVGNUrCcY0VeXC2A&s"
+    },
+    {
+        "RecipeName": "Idli",
+        "Ingredients": "Rice, Urad dal, Salt",
+        "BriefInstructions": [
+            "Step 1: Soak rice and dal.",
+            "Step 2: Grind the soaked rice and dal.",
+            "Step 3: Ferment the mixture.",
+            "Step 4: Steam the batter in idli molds."
+        ],
+        "Category": "Breakfast",
+        "HealthinessPercentage": 85,
+        "Suggestion": "Use less salt for a healthier version.",
+        "ImageSource": "https://cdn.zeptonow.com/production///tr:w-600,ar-100-100,pr-true,f-auto,q-80/web/recipes/idli.png"
+    },
+    {
+        "RecipeName": "Sambar",
+        "Ingredients": "Toor dal, Tamarind, Vegetables, Spices",
+        "BriefInstructions": [
+            "Step 1: Cook toor dal and vegetables.",
+            "Step 2: Add tamarind and spices.",
+            "Step 3: Simmer until the stew thickens.",
+            "Step 4: Serve hot with rice or idli."
+        ],
+        "Category": "Meal",
+        "HealthinessPercentage": 80,
+        "Suggestion": "Use less oil to make it lighter.",
+        "ImageSource": "https://www.shutterstock.com/image-photo/south-indian-food-sambhar-along-260nw-1580241163.jpg"
+    },
+    {
+        "RecipeName": "Hyderabadi Biryani",
+        "Ingredients": "Basmati rice, Chicken, Yogurt, Spices",
+        "BriefInstructions": [
+            "Step 1: Marinate chicken with yogurt and spices.",
+            "Step 2: Cook the marinated chicken.",
+            "Step 3: Layer the cooked chicken with rice.",
+            "Step 4: Steam the biryani until cooked."
+        ],
+        "Category": "Dinner",
+        "HealthinessPercentage": 60,
+        "Suggestion": "Use less oil and ghee for a healthier version.",
+        "ImageSource": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_UqbbQgfNMWWdx4d1CEnDwAUsVDxDLS52KA&s"
+    },
+    {
+        "RecipeName": "Mysore Pak",
+        "Ingredients": "Gram flour, Ghee, Sugar",
+        "BriefInstructions": [
+            "Step 1: Roast gram flour in ghee.",
+            "Step 2: Add sugar and stir until thickened.",
+            "Step 3: Pour into a greased tray and cut into pieces."
+        ],
+        "Category": "Dessert",
+        "HealthinessPercentage": 50,
+        "Suggestion": "Use less ghee for a lighter version.",
+        "ImageSource": "https://i.ytimg.com/vi/cdy_Qp-YfBQ/maxresdefault.jpg"
+    },
+    {
+        "RecipeName": "Vegetable Kurma" ,
+        "Ingredients": " Mixed-Vegetables, Coconut, Green Chillies, Cinnamon, Cloves, Cashews ",
+        "BriefInstructions": [
+            "Step 1: Grind coconut, spices, and cashews into a paste.",
+            "Step 2: Cook vegetables with this paste and water.",
+            "Step 3: Simmer until thick.",
+            "Step 4: Serve with chapati or rice."
+        
+        ],
+        "Category": "Dinner",
+        "HealthinessPercentage":"85" ,
+        "Suggestion":"Replace cashews with almonds for a lower calorie option." ,
+        "ImageSource": "https://www.cookwithmanali.com/wp-content/uploads/2017/06/Veg-Kurma-500x500.jpg"
+    },
+    {
+        "RecipeName": "Lemon-Rice" ,
+        "Ingredients": " Cooked rice, lemon juice, mustard-seeds, turmeric-powder, green chillies, curry leaves, peanuts, oil or butter. ",
+        "BriefInstructions": [
+            "Step 1: Heat oil or butter and temper mustard seeds, curry leaves, and green chillies.",
+            "Step 2: Add turmeric powder and peanuts.",
+            "Step 3: Mix the tempering with cooked rice and lemon juice.",
+            "Step 4: Serve warm."
+        ],
+        "Category": "Meal",
+        "HealthinessPercentage":"80" ,
+        "Suggestion":"Use less oil and add roasted peanuts for crunchier texture." ,
+        "ImageSource": "https://www.indianveggiedelight.com/wp-content/uploads/2023/03/lemon-rice-stovetop-featured.jpg"
+    },
+    {
+        "RecipeName": "Upma",
+        "Ingredients": "Semolina, Vegetables, Mustard seeds, Curry leaves",
+        "BriefInstructions": [
+            "Step 1: Roast semolina until golden and keep aside.",
+            "Step 2: Heat oil and temper with mustard seeds and curry leaves.",
+            "Step 3: Sauté chopped onions, green chilies, and vegetables.",
+            "Step 4: Add water, salt, and bring to a boil.",
+            "Step 5: Slowly stir in the roasted semolina and cook until fluffy.",
+            "Step 6: Garnish with coriander and serve hot."
+        ],
+        "Category": "Breakfast",
+        "HealthinessPercentage": 75,
+        "Suggestion": "Add nuts like cashews for extra flavor and nutrition.",
+        "ImageSource": "https://beextravegant.com/wp-content/uploads/2022/05/Untitled.png"
+    },
+    {
+        "RecipeName": "Pongal" ,
+            "Ingredients": " Rice, Moong Dal, Black pepper, Cumin, Ghee, Cashews, Curry leaves ",
+            "BriefInstructions": [
+                "Step 1: Cook rice and moong dal together until soft.",
+                "Step 2: Heat ghee and fry pepper, cumin, and cashews.",
+                "Step 3: Mix the tempering with cooked rice and dal.",
+                "Step 4: Garnish with curry leaves and serve hot."
+            ],
+            "Category": "Breakfast",
+            "HealthinessPercentage":"80" ,
+            "Suggestion":"Use less ghee and add vegetables for a healthier version." ,
+            "ImageSource": "https://www.spiceindiaonline.com/wp-content/uploads/2014/01/Ven-Pongal-3.jpg"
+    },
+    {
+        "RecipeName": "Avial" ,
+            "Ingredients": " Mixed-Vegetables, Coconut, Curd, Green Chillies, Curry leaves, Coconut oil",
+            "BriefInstructions": [
+                "Step 1: Cook mixed vegetables until soft.",
+                "Step 2: Grind coconut and green chillies into a paste.",
+                "Step 3: Mix the paste with cooked vegetables and add curd.",
+                "Step 4: Simmer and garnish with coconut oil and curry leaves."
+            ],
+            "Category": "Meal",
+            "HealthinessPercentage":"90" ,
+            "Suggestion":"Use low-fat curd for a lighter version. " ,
+            "ImageSource": "https://foodtrails25.com/wp-content/uploads/2023/08/Avial-Aiyal.jpg"
+    },
+    {
+        "RecipeName": "Chettinad Chicken Curry",
+        "Ingredients": "Chicken, Onion, Tomato, Coconut, Spices, Curry Leaves",
+        "BriefInstructions": [
+            "Step 1: Roast and grind coconut with spices to make a masala.",
+            "Step 2: Sauté onions, tomatoes, and curry leaves.",
+            "Step 3: Add chicken and the ground masala, then cook until done.",
+            "Step 4: Garnish with fresh curry leaves and serve hot."
+        ],
+        "Category": "Dinner",
+        "HealthinessPercentage": 70,
+        "Suggestion": "Reduce the amount of oil for a lighter curry.",
+        "ImageSource": "https://www.whiskaffair.com/wp-content/uploads/2020/09/Chicken-Chettinad-Curry-2-3.jpg"
+    },
+    {
+        "RecipeName": "Payasam",
+        "Ingredients": "Milk, Vermicelli or Rice, Sugar, Ghee, Cardamom, Nuts and Raisins",
+        "BriefInstructions" : [
+            "Step 1: Roast vermicelli or rice in ghee.",
+            "Step 2: Boil milk and cook the roasted vermicelli or rice until soft.",
+            "Step 3: Add sugar and cardamom, then simmer.",
+            "Step 4: Garnish with roasted nuts and raisins before serving."
+        ],
+        "Category" : "Dessert",
+        "HealthinessPercentage": "65",
+        "Suggestion": "Use jaggery instead of sugar for healthier version.",
+        "ImageSource": "https://www.sharmispassions.com/wp-content/uploads/2014/09/kerala-payasam4.jpg"
+    }
+]

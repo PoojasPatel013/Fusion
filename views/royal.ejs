@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="<%= house.charAt(0).toUpperCase() + house.slice(1) %> House Recipes">
+    <meta name="author" content="Fusion">
+    <meta name="keywords" content="<%= house.charAt(0).toUpperCase() + house.slice(1) %>, recipes, royal houses, ingredients, healthiness">
+    <title><%= house.charAt(0).toUpperCase() + house.slice(1) %> Recipes</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #8B0000;
+            --secondary-color: #D4AF37;
+            --accent-color: #F0E68C;
+            --text-color: #333;
+            --background-color: #FFF8E7;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(to right, var(--primary-color), #C41E3A);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://source.unsplash.com/1600x900/?royal,palace') no-repeat center center;
+            background-size: cover;
+            opacity: 0.2;
+            z-index: 0;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .nav {
+            margin-top: 1.5rem;
+        }
+
+        .nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .nav a {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 0.7rem 2rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav a:hover {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .recipe-container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .recipe-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .recipe-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            border-bottom: 4px solid var(--secondary-color);
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        .recipe-description {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        .recipes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+        }
+
+        .recipe-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .recipe-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .recipe-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .recipe-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .recipe-image:hover {
+            transform: scale(1.05);
+        }
+
+        .recipe-details {
+            flex-grow: 1;
+        }
+
+        .recipe-info {
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .recipe-info strong {
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .instructions-list {
+            list-style-type: none;
+            margin-left: 0;
+            padding-left: 1.5rem;
+        }
+
+        .instructions-list li {
+            position: relative;
+            margin-bottom: 0.8rem;
+        }
+
+        .instructions-list li::before {
+            content: '•';
+            color: var(--secondary-color);
+            font-weight: bold;
+            position: absolute;
+            left: -1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .btn-back {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin-top: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-back:hover {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2.5rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+
+            .recipe-container {
+                padding: 0 1.5rem;
+            }
+
+            .recipe-header h2 {
+                font-size: 2.5rem;
+            }
+
+            .recipe-card {
+                padding: 2rem;
+            }
+
+            .recipe-title {
+                font-size: 1.8rem;
+            }
+
+            .recipe-image {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1><%= house.charAt(0).toUpperCase() + house.slice(1) %> Royal Recipes</h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="recipe-container">
+        <section class="recipe-header">
+            <h2><%= house.charAt(0).toUpperCase() + house.slice(1) %> House</h2>
+            <p class="recipe-description"><strong>Region:</strong> <%= houseDescription.region %></p>
+            <p class="recipe-description"><strong>Royalty:</strong> <%= houseDescription.royalty %></p>
+        </section>
+
+        <% if (recipes.length > 0) { %>
+            <div class="recipes-grid">
+                <% recipes.forEach(recipe => { %>
+                    <div class="recipe-card">
+                        <h3 class="recipe-title"><%= recipe.RecipeName %></h3>
+                        <% if (recipe.ImageSource) { %>
+                            <img src="<%= recipe.ImageSource %>" alt="<%= recipe.RecipeName %>" class="recipe-image" />
+                        <% } %>
+                        <div class="recipe-details">
+                            <p class="recipe-info"><strong>Ingredients:</strong> <%= recipe.Ingredients %></p>
+                            <p class="recipe-info"><strong>Category:</strong> <%= recipe.Category || "Unknown" %></p>
+                            <p class="recipe-info"><strong>Healthiness:</strong> <%= recipe.HealthinessPercentage || "N/A" %> %</p>
+                            <p class="recipe-info"><strong>Suggestion:</strong> <%= recipe.Suggestion || "No suggestions available" %></p>
+
+                            <h4 class="recipe-info">Instructions:</h4>
+                            <ul class="instructions-list">
+                                <% recipe.BriefInstructions.forEach(instruction => { %>
+                                    <li><%= instruction %></li>
+                                <% }) %>
+                            </ul>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        <% } else { %>
+            <p class="text-center italic text-neutral-500 mt-8">
+                No recipes available for <strong><%= house.charAt(0).toUpperCase() + house.slice(1) %></strong> with ingredient "<strong><%= ingredient || 'any' %></strong>". 
+            </p>
+        <% } %>
+
+        <a href="/" class="btn-back">Back to Home</a>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Fusion. All Rights Reserved.</p>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTop">↑</a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var backToTop = document.getElementById('backToTop');
+
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
+            });
+
+            backToTop.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>

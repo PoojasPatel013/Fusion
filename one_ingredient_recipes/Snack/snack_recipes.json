@@ -1,0 +1,228 @@
+[
+    {
+        "RecipeName": "Vada Pav",
+        "Ingredients": "Potato, Flour, Bun, Spices",
+        "BriefInstructions": [
+            "Step 1: Prepare spiced mashed potato.",
+            "Step 2: Fry the mashed potato mixture into vadas.",
+            "Step 3: Serve in a bun with chutney."
+        ],
+        "Category": "Snack",
+        "HealthinessPercentage": 50,
+        "Suggestion": "Use baked vadas instead of fried for a healthier version.",
+        "ImageSource": "https://thewhiskaddict.com/wp-content/uploads/2024/03/Vada-Pav-scaled.jpg"
+    },
+    {
+        "RecipeName": "Pani Puri",
+        "Ingredients": "Semolina, Potato, Chickpeas, Tamarind, Spices",
+        "BriefInstructions": [
+            "Step 1: Fill puris with spicy tamarind water.",
+            "Step 2: Add potato and chickpeas inside each puri.",
+            "Step 3: Serve immediately."
+        ],
+        "Category": "Snack",
+        "HealthinessPercentage": 65,
+        "Suggestion": "Use less tamarind and sugar for a healthier option.",
+        "ImageSource": "https://i0.wp.com/binjalsvegkitchen.com/wp-content/uploads/2015/03/Pani-Puri-H2-WP-WT-S.jpg?ssl=1"
+    },
+    {
+        "RecipeName": "Dhokla",
+        "Ingredients": "Chickpea flour, Yogurt, Mustard, Green chili",
+        "BriefInstructions": [
+            "Step 1: Prepare the batter using chickpea flour, yogurt, and spices.",
+            "Step 2: Steam the batter until cooked.",
+            "Step 3: Season with mustard and green chili."
+        ],
+        "Category": "Snack",
+        "HealthinessPercentage": 75,
+        "Suggestion": "Use less oil for a lighter version.",
+        "ImageSource": "https://www.maggi.in/sites/default/files/styles/home_stage_944_531/public/srh_recipes/3c7afb309403bc1e01a597a555037242.jpeg?h=51a72048&itok=Po32fl6-"
+    },
+    {
+        "RecipeName": "Samosa",
+        "Ingredients": "All-purpose flour, Potatoes, Peas, Spices, Oil",
+        "BriefInstructions": [
+            "Step 1: Prepare dough with all-purpose flour and water.",
+            "Step 2: Cook spiced potato and pea filling.",
+            "Step 3: Fill the dough, shape into triangles, and deep fry."
+        ],
+        "Category": "Snack",
+        "HealthinessPercentage": 60,
+        "Suggestion": "Use whole wheat flour and bake instead of frying for a healthier version.",
+        "ImageSource": "http://www.zedamagazine.com/wp-content/uploads/2018/06/Indian-Food-Samosa-Dish-HD-Wallpapers.jpg"
+    },
+    {
+        "RecipeName": "Pakora",
+        "Ingredients": "Chickpea flour, Onions, Spinach, Spices, Oil",
+        "BriefInstructions": [
+            "Step 1: Mix chickpea flour with water, spices, and chopped onions/spinach.",
+            "Step 2: Fry spoonfuls of the batter until golden."
+        ],
+        "Category": "Snack",
+        "HealthinessPercentage": 65,
+        "Suggestion": "Air fry instead of deep frying to reduce oil content.",
+        "ImageSource": "https://www.nextbihar.com/wp-content/uploads/2022/06/Chicken-Pakora-Recipe.jpg"
+    },
+    {
+        "RecipeName": "Aloo Tikki",
+        "Ingredients": "Potatoes, Bread crumbs, Spices, Oil",
+        "BriefInstructions": [
+            "Step 1: Mash boiled potatoes with spices and bread crumbs.",
+            "Step 2: Shape into patties and shallow fry until crispy."
+        ],
+        "Category": "Snack",
+        "HealthinessPercentage": 70,
+        "Suggestion": "Use oats or multigrain crumbs instead of bread crumbs for added fiber.",
+        "ImageSource": "https://www.faskitchen.com/wp-content/uploads/2015/04/potato-cutlet.jpg"
+    },
+    {
+        "RecipeName": "Bhel Puri",
+        "Ingredients": "Puffed rice, Sev, Tamarind chutney, Vegetables, Spices",
+        "BriefInstructions": [
+            "Step 1: Mix puffed rice with chopped vegetables and spices.",
+            "Step 2: Add tamarind chutney and sev, and serve immediately."
+        ],
+        "Category": "Snack",
+        "HealthinessPercentage": 75,
+        "Suggestion": "Replace sev with roasted peanuts for a healthier crunch.",
+        "ImageSource": "https://letsfixit.co.uk/wp-content/uploads/2020/02/Bhel-Puri-scaled.jpg"
+    },
+    {
+        "RecipeName": "Kachori",
+        "Ingredients": "All-purpose flour, Lentils, Spices, Oil",
+        "BriefInstructions": [
+            "Step 1: Prepare dough with all-purpose flour.",
+            "Step 2: Fill with spiced lentil filling and shape into balls.",
+            "Step 3: Deep fry until crispy."
+        ],
+        "Category": "Snack",
+        "HealthinessPercentage": 60,
+        "Suggestion": "Bake instead of frying and use whole wheat flour for added nutrition.",
+        "ImageSource": "https://www.funfoodfrolic.com/wp-content/uploads/2022/03/Kachori-Blog.jpg"
+    },
+    {
+        "RecipeName": "Misal Pav",
+        "Ingredients": "Sprouts, Spices, Pav (bread), Onions, Tomatoes",
+        "BriefInstructions": [
+            "Step 1: Cook sprouts with spices and a spicy gravy.",
+            "Step 2: Serve with pav, chopped onions, and lemon."
+        ],
+        "Category": "Snack",
+        "HealthinessPercentage": 70,
+        "Suggestion": "Use whole wheat pav and limit the oil for a healthier version.",
+        "ImageSource": "https://ministryofcurry.com/wp-content/uploads/2019/10/misal-pav-5.jpg"
+    },
+    {
+        "RecipeName": "Chaat Papdi",
+        "Ingredients": "Papdi (fried flour discs), Yogurt, Tamarind chutney, Sev, Vegetables",
+        "BriefInstructions": [
+            "Step 1: Arrange papdi on a plate.",
+            "Step 2: Top with yogurt, chutneys, chopped vegetables, and sev.",
+            "Step 3: Serve immediately."
+        ],
+        "Category": "Snack",
+        "HealthinessPercentage": 65,
+        "Suggestion": "Use baked papdi and low-fat yogurt for a lighter version.",
+        "ImageSource": "https://www.awesomecuisine.com/wp-content/uploads/2014/05/papri-chaat.jpg"
+    },
+    {
+        "RecipeName": "Bhakarwadi",
+        "Ingredients": "All-purpose flour, Chickpea flour, Spices, Oil",
+        "BriefInstructions": [
+            "Step 1: Prepare a dough with all-purpose flour.",
+            "Step 2: Roll with a spiced chickpea flour filling.",
+            "Step 3: Cut into rolls and fry until golden."
+        ],
+        "Category": "Snack",
+        "HealthinessPercentage": 60,
+        "Suggestion": "Bake instead of frying and use whole wheat flour for added fiber.",
+        "ImageSource": "https://static.vecteezy.com/system/resources/previews/013/754/263/large_2x/bhakarwadi-or-bakarvadi-or-bhakharwadi-is-an-indian-traditional-snacks-originating-from-pune-free-photo.jpg"
+    },
+    {
+        "RecipeName": "Pav Bhaji",
+        "Ingredients": "Mixed vegetables, Spices, Pav (bread), Butter",
+        "BriefInstructions": [
+            "Step 1: Cook mashed vegetables with spices to make a thick gravy.",
+            "Step 2: Serve with buttered pav and chopped onions."
+        ],
+        "Category": "Snack",
+        "HealthinessPercentage": 65,
+        "Suggestion": "Use less butter and whole wheat pav for a healthier version.",
+        "ImageSource": "https://vegecravings.com/wp-content/uploads/2023/08/Healthy-Pav-Bhaji-Recipe-Step-By-Step-Instructions-2048x1529.jpg"
+    },
+    {
+        "RecipeName": "Ragda Pattice",
+        "Ingredients": "Potatoes, White peas, Spices, Tamarind chutney, Sev",
+        "BriefInstructions": [
+            "Step 1: Prepare potato patties and cook ragda (white pea curry).",
+            "Step 2: Serve patties topped with ragda, chutneys, and sev."
+        ],
+        "Category": "Snack",
+        "HealthinessPercentage": 70,
+        "Suggestion": "Bake the patties instead of frying and use low-oil ragda preparation.",
+        "ImageSource": "https://www.vegrecipesofindia.com/wp-content/uploads/2021/06/ragda-pattice21-736x490.jpg"
+    },
+    {
+        "RecipeName": "Dabeli",
+        "Ingredients": "Pav (bread), Mashed potatoes, Tamarind chutney, Pomegranate seeds, Spices",
+        "BriefInstructions": [
+            "Step 1: Mix mashed potatoes with spices and tamarind chutney.",
+            "Step 2: Stuff into pav along with pomegranate seeds and roasted peanuts.",
+            "Step 3: Toast on a tawa with butter."
+        ],
+        "Category": "Snack",
+        "HealthinessPercentage": 65,
+        "Suggestion": "Use whole wheat pav and skip butter for a lighter option.",
+        "ImageSource": "https://pipingpotcurry.com/wp-content/uploads/2023/05/Dabeli-Recipe-Piping-Pot-Curry.jpg"
+    },
+    {
+        "RecipeName": "Sabudana Vada",
+        "Ingredients": "Sabudana (tapioca pearls), Potatoes, Peanuts, Spices, Oil",
+        "BriefInstructions": [
+            "Step 1: Mix soaked sabudana with mashed potatoes, peanuts, and spices.",
+            "Step 2: Shape into vadas and fry until golden."
+        ],
+        "Category": "Snack",
+        "HealthinessPercentage": 65,
+        "Suggestion": "Air fry or bake the vadas to reduce oil content.",
+        "ImageSource": "https://i0.wp.com/vegecravings.com/wp-content/uploads/2017/07/sabudana-vada-recipe-step-by-step-instructions.jpg?fit=2060%2C1944&quality=65&strip=all&ssl=1"
+    },
+    {
+        "RecipeName": "Khaman",
+        "Ingredients": "Chickpea flour, Yogurt, Spices, Curry leaves",
+        "BriefInstructions": [
+            "Step 1: Mix chickpea flour, yogurt, and spices to form a batter.",
+            "Step 2: Steam the batter until cooked.",
+            "Step 3: Temper with mustard seeds and curry leaves."
+        ],
+        "Category": "Snack",
+        "HealthinessPercentage": 75,
+        "Suggestion": "Use low-fat yogurt and skip tempering oil for a healthier option.",
+        "ImageSource": "https://tse1.mm.bing.net/th?id=OIP.BDLqjJ0ueVa2SZf4usdRTgHaE8&pid=Api&P=0&h=180"
+    },
+    {
+        "RecipeName": "Paneer Tikka",
+        "Ingredients": "Paneer, Yogurt, Spices, Vegetables",
+        "BriefInstructions": [
+            "Step 1: Marinate paneer and vegetables with spiced yogurt.",
+            "Step 2: Grill or bake until lightly charred."
+        ],
+        "Category": "Snack",
+        "HealthinessPercentage": 85,
+        "Suggestion": "Use low-fat yogurt for the marinade.",
+        "ImageSource": "https://carveyourcraving.com/wp-content/uploads/2021/10/paneer-tikka-dry-1024x1536.jpg"
+    },
+    {
+        "RecipeName": "Moong Dal Chilla",
+        "Ingredients": "Moong dal, Spices, Vegetables",
+        "BriefInstructions": [
+            "Step 1: Grind soaked moong dal into a batter.",
+            "Step 2: Add spices and chopped vegetables.",
+            "Step 3: Cook on a hot tawa like a pancake."
+        ],
+        "Category": "Snack",
+        "HealthinessPercentage": 90,
+        "Suggestion": "Use minimal oil for cooking.",
+        "ImageSource": "https://tse4.mm.bing.net/th?id=OIP.UJduCIFKVgtQPxvL4fidxwHaHa&pid=Api&P=0&h=180"
+    }
+]

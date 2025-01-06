@@ -1,0 +1,124 @@
+[
+    {
+        "RecipeName": "Aloo Paratha",
+        "Ingredients": "Potato, Wheat flour, Ghee, Spices",
+        "BriefInstructions": [
+            "Step 1: Boil potatoes and mash them with spices.",
+            "Step 2: Prepare dough with wheat flour, water, and a pinch of salt.",
+            "Step 3: Divide the dough into balls and flatten slightly.",
+            "Step 4: Stuff each ball with the mashed potato mixture.",
+            "Step 5: Roll the stuffed balls into thin parathas.",
+            "Step 6: Cook on a hot griddle, brushing with ghee on both sides.",
+            "Step 7: Serve hot with yogurt or pickle."
+        ],
+        "Category": "Breakfast",
+        "HealthinessPercentage": 65,
+        "Suggestion": "Use less ghee and add grated carrots or spinach for extra nutrition.",
+        "ImageSource": "https://shivanilovesfood.com/wp-content/uploads/2024/03/Aloo-Paratha-13.jpg"
+    },
+    {
+        "RecipeName": "Poha",
+        "Ingredients": "Flattened rice, Peanuts, Mustard seeds, Curry leaves, Turmeric",
+        "BriefInstructions": [
+            "Step 1: Rinse flattened rice and drain excess water.",
+            "Step 2: Heat oil in a pan and temper with mustard seeds and curry leaves.",
+            "Step 3: Add peanuts and sauté until golden.",
+            "Step 4: Add chopped onions, green chilies, and turmeric powder.",
+            "Step 5: Mix in the soaked flattened rice and cook for 2-3 minutes.",
+            "Step 6: Garnish with coriander and lemon juice.",
+            "Step 7: Serve hot."
+        ],
+        "Category": "Breakfast",
+        "HealthinessPercentage": 75,
+        "Suggestion": "Add vegetables like peas or carrots for added nutrition.",
+        "ImageSource": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu2BnTkCPRNCCOQDdQ-x5fhnu6OYAEGEp_9Q&s"
+    },
+    {
+        "RecipeName": "Upma",
+        "Ingredients": "Semolina, Vegetables, Mustard seeds, Curry leaves",
+        "BriefInstructions": [
+            "Step 1: Roast semolina until golden and keep aside.",
+            "Step 2: Heat oil and temper with mustard seeds and curry leaves.",
+            "Step 3: Sauté chopped onions, green chilies, and vegetables.",
+            "Step 4: Add water, salt, and bring to a boil.",
+            "Step 5: Slowly stir in the roasted semolina and cook until fluffy.",
+            "Step 6: Garnish with coriander and serve hot."
+        ],
+        "Category": "Breakfast",
+        "HealthinessPercentage": 75,
+        "Suggestion": "Add nuts like cashews for extra flavor and nutrition.",
+        "ImageSource": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY53aX95ngx4daNRLz5ykPUHXLCgUCB98Ltw&s"
+    },
+    {
+        "RecipeName": "Besan Chilla",
+        "Ingredients": "Gram flour, Vegetables, Spices",
+        "BriefInstructions": [
+            "Step 1: Prepare a batter with gram flour, water, and spices.",
+            "Step 2: Mix in finely chopped onions, tomatoes, and green chilies.",
+            "Step 3: Heat a griddle and pour a ladleful of batter to form a thin pancake.",
+            "Step 4: Cook on both sides until golden brown.",
+            "Step 5: Serve hot with mint chutney or ketchup."
+        ],
+        "Category": "Breakfast",
+        "HealthinessPercentage": 80,
+        "Suggestion": "Add grated carrots or spinach to increase the fiber content.",
+        "ImageSource": "https://shwetainthekitchen.com/wp-content/uploads/2023/09/Besan-Chilla.jpg"
+    },
+    {
+        "RecipeName": "Vegetable Sandwich",
+        "Ingredients": "Bread, Vegetables, Cheese, Chutney",
+        "BriefInstructions": [
+            "Step 1: Spread green chutney on bread slices.",
+            "Step 2: Layer thinly sliced vegetables like cucumber, tomato, and beetroot.",
+            "Step 3: Add a slice of cheese if desired.",
+            "Step 4: Grill the sandwich or serve as is."
+        ],
+        "Category": "Breakfast",
+        "HealthinessPercentage": 70,
+        "Suggestion": "Use multigrain bread and add avocado for healthy fats.",
+        "ImageSource": "https://foodbyjonister.com/wp-content/uploads/2020/03/VegetableSandwich5.jpg"
+    },
+    {
+        "RecipeName": "Moong Dal Cheela",
+        "Ingredients": "Moong dal, Vegetables, Spices",
+        "BriefInstructions": [
+            "Step 1: Soak moong dal for 4 hours and grind into a smooth batter.",
+            "Step 2: Mix in spices, finely chopped vegetables, and salt.",
+            "Step 3: Heat a griddle and spread a ladleful of batter into a thin circle.",
+            "Step 4: Cook on both sides until golden brown.",
+            "Step 5: Serve hot with chutney or yogurt."
+        ],
+        "Category": "Breakfast",
+        "HealthinessPercentage": 85,
+        "Suggestion": "Add fenugreek leaves for an additional health boost.",
+        "ImageSource": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx3mzZjra0QufFOA9a_dNnXfKzeOBtiYj0pw&s"
+    },
+    {
+        "RecipeName": "Pesarattu",
+        "Ingredients": "Green gram, Rice, Spices",
+        "BriefInstructions": [
+            "Step 1: Soak green gram and rice for 6 hours.",
+            "Step 2: Grind into a smooth batter with green chilies and ginger.",
+            "Step 3: Heat a griddle and pour a ladleful of batter to form a thin dosa.",
+            "Step 4: Cook on both sides and serve hot with ginger chutney."
+        ],
+        "Category": "Breakfast",
+        "HealthinessPercentage": 80,
+        "Suggestion": "Pair with coconut chutney for a delightful taste.",
+        "ImageSource": "https://www.masalakorb.com/wp-content/uploads/2019/06/Pesarattu-Preparation-V4.jpg"
+    },
+    {
+        "RecipeName": "Thepla",
+        "Ingredients": "Wheat flour, Fenugreek leaves, Yogurt, Spices",
+        "BriefInstructions": [
+            "Step 1: Prepare dough with wheat flour, fenugreek leaves, yogurt, and spices.",
+            "Step 2: Roll the dough into thin flatbreads.",
+            "Step 3: Cook on a hot griddle with minimal oil.",
+            "Step 4: Serve hot with pickle or yogurt."
+        ],
+        "Category": "Breakfast",
+        "HealthinessPercentage": 75,
+        "Suggestion": "Add grated bottle gourd for more nutrition.",
+        "ImageSource": "https://cdn.tarladalal.com/members/9306/big/big_methi_thepla,_gujarati_methi_thepla_recipe-14510.jpg"
+    }
+]

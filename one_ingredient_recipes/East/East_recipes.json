@@ -1,0 +1,70 @@
+[
+    {
+        "RecipeName": "Macher Jhol",
+        "Ingredients": "Fish, Mustard oil, Tomato, Potatoes",
+        "BriefInstructions": [
+            "Step 1: Clean the fish and marinate with salt and turmeric.",
+            "Step 2: Heat mustard oil in a pan until it smokes.",
+            "Step 3: Fry the fish until golden brown; set aside.",
+            "Step 4: Add diced potatoes and fry until lightly browned.",
+            "Step 5: Add tomatoes, ginger, and spices; cook until mushy.",
+            "Step 6: Add water to make a thin curry base.",
+            "Step 7: Return fish to the pan and simmer for 10 minutes.",
+            "Step 8: Garnish with fresh coriander and serve hot."
+        ],
+        "Category": "Meal",
+        "HealthinessPercentage": 70,
+        "Suggestion": "Already healthy. Use less oil for a lighter version.",
+        "ImageSource": "https://peekncooksa.blob.core.windows.net/index-recipe/foli_macher_jhol.jpg"
+    },
+    {
+        "RecipeName": "Pakhala Bhata",
+        "Ingredients": "Rice, Water, Yogurt, Green chilies",
+        "BriefInstructions": [
+            "Step 1: Cook rice and allow it to cool.",
+            "Step 2: Soak rice in water overnight.",
+            "Step 3: Chop green chilies finely.",
+            "Step 4: Serve soaked rice with yogurt and green chilies."
+        ],
+        "Category": "Dinner",
+        "HealthinessPercentage": 50,
+        "Suggestion": "Use brown rice for added fiber and nutrients.",
+        "ImageSource": "https://www.pepperonpizza.com/wp-content/uploads/2021/06/Chunka-Dahi-Pakhala_F-1_1200-x-1200.jpg"
+    },
+    {
+        "RecipeName": "Chingri Malai Curry",
+        "Ingredients": "Prawns, Coconut milk, Spices",
+        "BriefInstructions": [
+            "Step 1: Clean and devein prawns; marinate with turmeric and salt.",
+            "Step 2: Heat oil in a pan and fry prawns; set aside.",
+            "Step 3: In the same pan, fry onions until golden.",
+            "Step 4: Add ginger-garlic paste and cook for 2 minutes.",
+            "Step 5: Add turmeric, chili powder, and garam masala.",
+            "Step 6: Pour in coconut milk and simmer for 5 minutes.",
+            "Step 7: Add prawns and cook for another 5 minutes.",
+            "Step 8: Garnish with fresh cilantro and serve with rice."
+        ],
+        "Category": "Dinner",
+        "HealthinessPercentage": 45,
+        "Suggestion": "Use light coconut milk to reduce fat content.",
+        "ImageSource":"https://lh5.googleusercontent.com/proxy/tJp6JZNBhcZSVjNNygyYHcEKpTgQEGiKvTstghHv3bcCKQSWiANw-raF7kKTz9CQ9vtD2sSPw3BVm6LK6JTbmPsR6TUTVN7cmpTZpw"
+    },
+    {
+        "RecipeName": "Litti Chokha",
+        "Ingredients": "Wheat flour, Sattu, Potato, Spices",
+        "BriefInstructions": [
+            "Step 1: Prepare dough with wheat flour, water, and salt.",
+            "Step 2: Mix sattu with spices and mustard oil to make stuffing.",
+            "Step 3: Roll the dough into small balls and stuff with sattu mix.",
+            "Step 4: Bake stuffed dough balls until golden brown.",
+            "Step 5: Boil potatoes and mash with spices to make chokha.",
+            "Step 6: Roast eggplant (optional) for additional chokha flavor.",
+            "Step 7: Serve litti with chokha and ghee."
+        ],
+        "Category": "Meal",
+        "HealthinessPercentage": 60,
+        "Suggestion": "Add more vegetables to chokha or use multigrain flour.",
+        "ImageSource": "https://reciphoria.com/wp-content/uploads/2020/06/Litti-chokha-600x800.jpg"
+    }
+
+]

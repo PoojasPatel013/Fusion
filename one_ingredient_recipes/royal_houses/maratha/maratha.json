@@ -1,0 +1,84 @@
+{
+    "house": "Maratha",
+    "description": {
+        "region": "Maratha region encompasses Maharashtra and parts of Gujarat, Karnataka, and Madhya Pradesh. The Marathas were renowned for their warrior culture, and their cuisine reflects their bold, robust, and earthy flavors. Their food often includes a balance of spicy and sweet, with a fondness for coconut, jaggery, and ground spices.",
+        "royalty": "The Maratha kings, including the famous Shivaji Maharaj, are remembered not only for their military prowess but also for their contribution to the rich culinary traditions. Maratha feasts were a combination of hearty meats, flavorful vegetables, and unique desserts, often served with a variety of breads and rice."
+    },
+    "dishes": [
+        
+        {
+            "RecipeName": "Puran Poli",
+            "Ingredients": "Wheat flour, Chana dal (split chickpeas), Jaggery, Cardamom, Ghee",
+            "BriefInstructions": [
+                "Step 1: Cook chana dal and grind it to a paste.",
+                "Step 2: Mix jaggery, cardamom, and ghee to the dal paste and cook until it thickens.",
+                "Step 3: Prepare the dough with wheat flour and ghee.",
+                "Step 4: Roll out the dough, stuff it with the filling, and cook the polis on a tawa with ghee.",
+                "Step 5: Serve hot with a dollop of ghee."
+            ],
+            "Category": "Main Course",
+            "HealthinessPercentage": 70,
+            "Suggestion": "Pairs beautifully with a glass of buttermilk.",
+            "ImageSource": "https://i.pinimg.com/736x/75/26/45/75264591e2dafff625a74f87f018a8d5.jpg"
+        },
+        {
+            "RecipeName": "Modak",
+            "Ingredients": "Rice flour, Jaggery, Coconut, Cardamom, Ghee",
+            "BriefInstructions": [
+                "Step 1: Make a dough with rice flour and water.",
+                "Step 2: Prepare the filling by cooking jaggery with grated coconut and cardamom.",
+                "Step 3: Stuff the dough with the filling and shape into a modak (dumpling).",
+                "Step 4: Steam the modaks until soft.",
+                "Step 5: Serve warm with a drizzle of ghee."
+            ],
+            "Category": "Dessert",
+            "HealthinessPercentage": 60,
+            "Suggestion": "Perfect for festive occasions like Ganesh Chaturthi.",
+            "ImageSource": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYcbtzhyc7iFtLJNC233AI8jlDAcQt2aIzVXLbctsRzpkN8hfvdmnjoNTt1m5JIjB2txw&usqp=CAU"
+        },
+        {
+            "RecipeName": "Kolhapuri Misal",
+            "Ingredients": "Sprouted beans, Onion, Tomatoes, Garlic, Ginger, Green chili, Spices",
+            "BriefInstructions": [
+                "Step 1: Boil sprouted beans and set aside.",
+                "Step 2: Heat oil and sauté onions, tomatoes, garlic, and ginger.",
+                "Step 3: Add the boiled beans along with ground spices and cook until well combined.",
+                "Step 4: Prepare a spicy gravy with coconut and serve the misal with pav (bread).",
+                "Step 5: Garnish with fresh coriander and a squeeze of lime."
+            ],
+            "Category": "Main Course",
+            "HealthinessPercentage": 80,
+            "Suggestion": "Serve with crispy pav and a bowl of yogurt to balance the heat.",
+            "ImageSource": "https://images.lifestyleasia.com/wp-content/uploads/sites/7/2022/06/20174313/Untitled-design-2-18.jpg"
+        },
+        {
+            "RecipeName": "Bhaakri",
+            "Ingredients": "Rice flour, Jowar (sorghum) flour, Salt, Ghee",
+            "BriefInstructions": [
+                "Step 1: Mix rice and jowar flour with a pinch of salt and water to form a dough.",
+                "Step 2: Roll the dough into thick, round flatbreads (bhaakris).",
+                "Step 3: Cook them on a hot tawa, pressing them gently to puff up.",
+                "Step 4: Serve the bhaakri with ghee or a side of spicy chutney."
+            ],
+            "Category": "Side Dish",
+            "HealthinessPercentage": 85,
+            "Suggestion": "Pair with spicy Bhaji or a bowl of curd for an authentic taste.",
+            "ImageSource": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL7HRndGxmSriZd8wwGusVYWUTC1TImL0eyw&s"
+        },
+        {
+            "RecipeName": "Sabudana Khichdi",
+            "Ingredients": "Sabudana (tapioca pearls), Potato, Green chilies, Groundnuts, Ghee",
+            "BriefInstructions": [
+                "Step 1: Soak sabudana in water for a few hours.",
+                "Step 2: Heat ghee in a pan and sauté chopped potatoes and green chilies.",
+                "Step 3: Add soaked sabudana and stir-fry until translucent.",
+                "Step 4: Add groundnuts, salt, and lemon juice.",
+                "Step 5: Garnish with fresh coriander and serve with a side of yogurt."
+            ],
+            "Category": "Breakfast/Side Dish",
+            "HealthinessPercentage": 90,
+            "Suggestion": "Enjoy with a glass of buttermilk or a cup of hot tea.",
+            "ImageSource": "https://www.twinskirasoi.in/wp-content/uploads/2020/10/Sabudana-Khichdi-3.jpg"
+        }
+    ]
+}

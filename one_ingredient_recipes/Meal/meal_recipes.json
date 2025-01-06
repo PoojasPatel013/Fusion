@@ -1,0 +1,37 @@
+[
+    {
+        "RecipeName": "Rajma Masala",
+        "Ingredients": "Kidney Beans, Onion, Tomato, Spices",
+        "BriefInstructions": [
+            "Step 1: Soak kidney beans overnight and boil until soft.",
+            "Step 2: Heat oil in a pan and sauté onions until golden.",
+            "Step 3: Add ginger-garlic paste and cook for 2 minutes.",
+            "Step 4: Stir in pureed tomatoes and cook until thickened.",
+            "Step 5: Add spices and salt; mix well.",
+            "Step 6: Add boiled beans and simmer for 15 minutes.",
+            "Step 7: Garnish with coriander and serve with rice."
+        ],
+        "Category": "Meal",
+        "HealthinessPercentage": 75,
+        "Suggestion": "Already healthy. Use less oil for a lighter version.",
+        "ImageSource": "https://www.indianveggiedelight.com/wp-content/uploads/2022/10/instant-pot-rajma-masala-1.jpg"
+    },
+    {
+        "RecipeName": "Chole Bhature",
+        "Ingredients": "Chickpeas, Flour, Ghee, Onion, Tomato",
+        "BriefInstructions": [
+            "Step 1: Soak chickpeas overnight and boil until tender.",
+            "Step 2: Heat oil and sauté onions until golden brown.",
+            "Step 3: Add ginger-garlic paste and cook for 2 minutes.",
+            "Step 4: Add pureed tomatoes, spices, and salt; cook until thickened.",
+            "Step 5: Stir in boiled chickpeas and simmer for 10 minutes.",
+            "Step 6: Prepare dough with flour, water, and salt for bhature.",
+            "Step 7: Roll dough into flat rounds and deep fry until golden.",
+            "Step 8: Serve hot chickpeas with bhature."
+        ],
+        "Category": "Meal",
+        "HealthinessPercentage": 50,
+        "Suggestion": "Use baked bread instead of fried bhature for a healthier option.",
+        "ImageSource": "https://t4.ftcdn.net/jpg/06/13/65/75/360_F_613657549_r41cG3xRcPuH4CUUGw3CFOHhHUnZXIOo.jpg"
+    }
+]

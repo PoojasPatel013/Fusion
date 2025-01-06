@@ -1,0 +1,113 @@
+{
+  "house": "Mysore",
+  "description": {
+      "region": "The Mysore region, located in Karnataka, is known for its rich cultural heritage and royal history. The cuisine reflects the flavors of the royal kitchens, with a blend of both vegetarian and non-vegetarian dishes.",
+      "royalty": "The Mysore Maharajas were known for their grandeur and their culinary legacy. The dishes served at their feasts were a celebration of Karnataka's diverse ingredients, often showcasing intricate spice blends and royal flavors."
+  },
+  "dishes": [
+      {
+          "RecipeName": "Bisi Bele Bath",
+          "Ingredients": "Rice, Lentils, Vegetables, Tamarind, Spices (cinnamon, cloves, cardamom, mustard seeds, cumin)",
+          "BriefInstructions": [
+              "Step 1: Cook rice and lentils with water until soft.",
+              "Step 2: Add chopped vegetables and tamarind pulp to the mix.",
+              "Step 3: Prepare a spice blend with cinnamon, cloves, cardamom, and other spices.",
+              "Step 4: Cook everything together in a pot, adding seasoning to taste.",
+              "Step 5: Serve hot with a dollop of ghee."
+          ],
+          "Category": "Main Course",
+          "HealthinessPercentage": 80,
+          "Suggestion": "Pairs wonderfully with crispy papad and a side of yogurt.",
+          "ImageSource": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqbTlzVwxWBvWUmDWnhRMNs4AiVkSDaG39nQ&s"
+      },
+      {
+          "RecipeName": "Raita",
+          "Ingredients": "Yogurt, Cucumber, Onion, Cumin, Salt, Coriander",
+          "BriefInstructions": [
+              "Step 1: Grate cucumber and chop onions.",
+              "Step 2: Mix the cucumber and onion with yogurt.",
+              "Step 3: Add ground cumin, salt, and chopped coriander.",
+              "Step 4: Stir well and refrigerate before serving.",
+              "Step 5: Serve chilled as a side dish."
+          ],
+          "Category": "Side Dish",
+          "HealthinessPercentage": 90,
+          "Suggestion": "Ideal as a cooling side with spicy dishes.",
+          "ImageSource": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFjjhz4DNSDNYYnaBkORfG3M4oPV0tyRVZmA&s"
+      },
+      {
+          "RecipeName": "Sambar",
+          "Ingredients": "Lentils, Tamarind, Vegetables (carrot, drumstick, tomato), Sambar powder, Mustard seeds, Curry leaves",
+          "BriefInstructions": [
+              "Step 1: Cook lentils until soft.",
+              "Step 2: Add tamarind paste and chopped vegetables.",
+              "Step 3: Prepare sambar powder and add to the mixture.",
+              "Step 4: Temper mustard seeds and curry leaves in hot oil, then add to the sambar.",
+              "Step 5: Serve with rice or dosa."
+          ],
+          "Category": "Side Dish",
+          "HealthinessPercentage": 85,
+          "Suggestion": "Serve with hot steamed rice or crispy dosas.",
+          "ImageSource": "https://i0.wp.com/www.pepperdelight.com/wp-content/uploads/2017/08/pepper-delight-sambar-3.jpg?resize=1155%2C1733"
+      },
+      {
+          "RecipeName": "Poori",
+          "Ingredients": "Wheat flour, Water, Salt, Oil",
+          "BriefInstructions": [
+              "Step 1: Prepare a dough with wheat flour, salt, and water.",
+              "Step 2: Roll the dough into small balls and flatten into circles.",
+              "Step 3: Heat oil in a deep pan and fry the pooris until golden brown.",
+              "Step 4: Serve hot with curry or chutney."
+          ],
+          "Category": "Bread",
+          "HealthinessPercentage": 60,
+          "Suggestion": "Pair with a spicy curry or potato dish for an authentic meal.",
+          "ImageSource": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Fluffy_Poori.JPG/1200px-Fluffy_Poori.JPG"
+      },
+      {
+          "RecipeName": "Hyderabadi Biryani",
+          "Ingredients": "Basmati rice, Meat (chicken or mutton), Yogurt, Saffron, Spices (cinnamon, cloves, cardamom, bay leaf), Mint, Onion",
+          "BriefInstructions": [
+              "Step 1: Marinate the meat with yogurt, spices, and saffron.",
+              "Step 2: Cook basmati rice separately until half-done.",
+              "Step 3: Layer the marinated meat and rice, and cook everything together in a pot.",
+              "Step 4: Garnish with fried onions and mint leaves.",
+              "Step 5: Serve with a side of raita."
+          ],
+          "Category": "Main Course",
+          "HealthinessPercentage": 70,
+          "Suggestion": "Best enjoyed with a fresh cucumber raita or salad.",
+          "ImageSource": "https://media-assets.swiggy.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/eebc092ff71399023cf8d5eeec7b7e4c"
+      },
+      {
+          "RecipeName": "Palak Paneer",
+          "Ingredients": "Spinach, Paneer, Cream, Onion, Tomato, Spices (cumin, garam masala, turmeric)",
+          "BriefInstructions": [
+              "Step 1: Blanch spinach and blend into a smooth puree.",
+              "Step 2: Fry onions, tomatoes, and spices in a pan.",
+              "Step 3: Add spinach puree and cook for a few minutes.",
+              "Step 4: Add paneer cubes and simmer until cooked through.",
+              "Step 5: Finish with a splash of cream and serve hot."
+          ],
+          "Category": "Main Course",
+          "HealthinessPercentage": 85,
+          "Suggestion": "Serve with naan or steamed rice for a complete meal.",
+          "ImageSource": "https://cdn.zeptonow.com/production///tr:w-600,ar-100-100,pr-true,f-auto,q-80/web/recipes/palak-paneer.png"
+      },
+      {
+          "RecipeName": "Gulab Jamun",
+          "Ingredients": "Milk solids, Sugar, Rose water, Cardamom, Ghee, Flour",
+          "BriefInstructions": [
+              "Step 1: Prepare a dough with milk solids, flour, and ghee.",
+              "Step 2: Shape into small balls and fry them in ghee.",
+              "Step 3: Prepare sugar syrup flavored with rose water and cardamom.",
+              "Step 4: Soak the fried gulab jamuns in the syrup.",
+              "Step 5: Serve warm or at room temperature."
+          ],
+          "Category": "Dessert",
+          "HealthinessPercentage": 50,
+          "Suggestion": "Best served with a hot cup of chai or during festivals.",
+          "ImageSource": "https://chefadora.b-cdn.net/003f0f0351967a7cb6212a8d9bfaf889_f956154e73.jpg"
+      }
+  ]
+}

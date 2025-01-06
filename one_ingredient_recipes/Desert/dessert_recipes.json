@@ -1,0 +1,34 @@
+[
+    {
+        "RecipeName": "Gulab Jamun",
+        "Ingredients": "Milk powder, Flour, Sugar, Cardamom",
+        "BriefInstructions": [
+            "Step 1: Mix milk powder, flour, and ghee to form a dough.",
+            "Step 2: Roll into small balls.",
+            "Step 3: Deep fry balls until golden brown.",
+            "Step 4: Prepare sugar syrup with water, sugar, and cardamom.",
+            "Step 5: Soak fried balls in warm sugar syrup for 2 hours.",
+            "Step 6: Serve warm or chilled."
+        ],
+        "Category": "Dessert",
+        "HealthinessPercentage": 40,
+        "Suggestion": "Use baked versions or reduce sugar in the syrup.",
+        "ImageSource": "https://nishkitchen.com/wp-content/uploads/2018/09/Rava-gulab-jamun-3B.jpg"
+    },
+    {
+        "RecipeName": "Kheer",
+        "Ingredients": "Rice, Milk, Sugar, Cardamom, Dry fruits",
+        "BriefInstructions": [
+            "Step 1: Wash rice and soak for 30 minutes.",
+            "Step 2: Boil milk and add soaked rice.",
+            "Step 3: Cook on low flame, stirring occasionally.",
+            "Step 4: Add sugar, cardamom, and dry fruits.",
+            "Step 5: Simmer until the mixture thickens.",
+            "Step 6: Serve warm or chilled."
+        ],
+        "Category": "Dessert",
+        "HealthinessPercentage": 55,
+        "Suggestion": "Use jaggery or honey as a sweetener and skim milk for a healthier version.",
+        "ImageSource": "https://masalaandchai.com/wp-content/uploads/2021/08/Rice-Kheer-1.jpg"
+    }
+]

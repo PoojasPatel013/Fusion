@@ -1,0 +1,69 @@
+{
+    "house": "Rajputana",
+    "description": {
+        "region": "Rajputana, located in the northwestern part of India, was a region known for its valor and opulent lifestyle. The Rajput kings were famous for their martial traditions, hospitality, and grand feasts. Rajputana cuisine is a beautiful amalgamation of rustic flavors and royal elegance, with dishes rich in ghee, yogurt, and aromatic spices.",
+        "royalty": "The Rajput kings were known for their warrior spirit, and their lavish feasts reflected their grandeur. The royal kitchens were designed to impress, featuring a mix of rich meat dishes, vegetarian delicacies, and complex desserts."
+    },
+    "dishes": [ 
+        {
+            "RecipeName": "Laal Maas",
+            "Ingredients": "Mutton, Red chili, Garlic, Ginger, Onion, Spices",
+            "BriefInstructions": [
+                "Step 1: Marinate the mutton with yogurt and spices for a few hours.",
+                "Step 2: Heat oil in a pan and sauté onions until golden.",
+                "Step 3: Add garlic, ginger, and spices, and cook until fragrant.",
+                "Step 4: Add mutton and cook on high heat until browned.",
+                "Step 5: Add water and simmer until the mutton is tender and the sauce thickens.",
+                "Step 6: Garnish with fresh coriander and serve hot with rice or naan."
+            ],
+            "Category": "Main Course",
+            "HealthinessPercentage": 60,
+            "Suggestion": "Serve with a side of cooling yogurt to balance the heat.",
+            "ImageSource": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzAxZFkWYJH2i0G4IpRtMCSiLbrnP5DYxkyA&s"
+        },
+        {
+            "RecipeName": "Dal Baati Churma",
+            "Ingredients": "Wheat flour, Ghee, Lentils, Spices, Jaggery",
+            "BriefInstructions": [
+                "Step 1: Prepare the baatis by mixing wheat flour, ghee, and water, then bake them.",
+                "Step 2: Cook the dal with spices and boil until soft.",
+                "Step 3: Prepare churma by crumbling baatis and frying in ghee, then mixing with jaggery.",
+                "Step 4: Serve dal with baatis and churma on the side."
+            ],
+            "Category": "Main Course",
+            "HealthinessPercentage": 75,
+            "Suggestion": "Enjoy with a dollop of ghee for an authentic taste.",
+            "ImageSource": "https://rukminim2.flixcart.com/image/850/1000/kmax8y80/painting/o/i/5/12-m50-dbrush-original-imagf8djbrw4mquz.jpeg?q=20&crop=false"
+        },
+        {
+            "RecipeName": "Ghevar",
+            "Ingredients": "Flour, Ghee, Sugar, Cardamom, Saffron",
+            "BriefInstructions": [
+                "Step 1: Mix flour with water to form a batter.",
+                "Step 2: Heat ghee in a deep pan and pour the batter in a circular motion to create a round cake.",
+                "Step 3: Once fried, soak the ghevar in sugar syrup flavored with cardamom and saffron.",
+                "Step 4: Garnish with slivers of almonds and saffron strands."
+            ],
+            "Category": "Dessert",
+            "HealthinessPercentage": 50,
+            "Suggestion": "Best served with chilled milk or ice cream.",
+            "ImageSource": "https://www.cookwithmanali.com/wp-content/uploads/2016/08/Ghevar-Indian-Sweet-500x500.jpg"
+        },
+        {
+            "RecipeName": "Mohan Thal",
+            "Ingredients": "Gram flour, Ghee, Sugar, Cardamom, Nuts",
+            "BriefInstructions": [
+                "Step 1: Roast gram flour in ghee until golden brown and aromatic.",
+                "Step 2: Prepare sugar syrup with cardamom.",
+                "Step 3: Mix the roasted flour with the syrup, cook it together, and set into a tray.",
+                "Step 4: Cut into pieces and garnish with chopped nuts like pistachios and almonds.",
+                "Step 5: Let it set and cool before serving."
+            ],
+            "Category": "Dessert",
+            "HealthinessPercentage": 50,
+            "Suggestion": "Serve with a glass of chilled rosewater lemonade for a royal touch.",
+            "ImageSource": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqut2yqoP4gRKQbmfiK0ZFMH9sAtDAv66nlQ&s"
+        }
+
+    ]
+}

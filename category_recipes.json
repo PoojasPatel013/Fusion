@@ -1,0 +1,121 @@
+[
+    {
+      "RecipeName": "Chana Masala",
+      "Ingredients": "Chickpeas, Onion, Tomato, Garlic, Ginger, Spices",
+      "BriefInstructions": [
+        "Step 1: Soak chickpeas overnight and boil until tender.",
+        "Step 2: Sauté onions, garlic, and ginger in oil until golden.",
+        "Step 3: Add tomatoes and spices, cook until oil separates.",
+        "Step 4: Add boiled chickpeas and simmer for 15 minutes.",
+        "Step 5: Garnish with coriander and serve hot."
+      ],
+      "Category": "vegetarian",
+      "HealthinessPercentage": 85,
+      "Suggestion": "Use less oil for an even healthier version.",
+      "ImageSource": ""
+    },
+    {
+      "RecipeName": "Vegetable Biryani",
+      "Ingredients": "Basmati rice, Mixed vegetables, Onion, Spices, Ghee",
+      "BriefInstructions": [
+        "Step 1: Parboil rice and set aside.",
+        "Step 2: Sauté onions and vegetables with spices.",
+        "Step 3: Layer rice and vegetable mixture in a pot.",
+        "Step 4: Cook on low heat for 20 minutes.",
+        "Step 5: Garnish with fried onions and serve."
+      ],
+      "Category": "vegetarian",
+      "HealthinessPercentage": 75,
+      "Suggestion": "Use brown rice for added fiber and nutrients.",
+      "ImageSource": ""
+    },
+    {
+      "RecipeName": "Tofu Tikka Masala",
+      "Ingredients": "Tofu, Coconut milk, Tomato puree, Onion, Spices",
+      "BriefInstructions": [
+        "Step 1: Press and cube tofu, then marinate in spices.",
+        "Step 2: Bake or pan-fry marinated tofu until crispy.",
+        "Step 3: Sauté onions and add tomato puree and spices.",
+        "Step 4: Stir in coconut milk and simmer for 10 minutes.",
+        "Step 5: Add crispy tofu and cook for 5 more minutes.",
+        "Step 6: Garnish with cilantro and serve with rice or naan."
+      ],
+      "Category": "vegan",
+      "HealthinessPercentage": 80,
+      "Suggestion": "Add more vegetables for extra nutrients.",
+      "ImageSource": ""
+    },
+    {
+      "RecipeName": "Vegetable Daal",
+      "Ingredients": "Lentils, Mixed vegetables, Onion, Tomato, Spices",
+      "BriefInstructions": [
+        "Step 1: Cook lentils until soft and set aside.",
+        "Step 2: Sauté onions, add tomatoes and spices.",
+        "Step 3: Add mixed vegetables and cook until tender.",
+        "Step 4: Stir in cooked lentils and simmer for 10 minutes.",
+        "Step 5: Garnish with coriander and serve."
+      ],
+      "Category": "vegan",
+      "HealthinessPercentage": 90,
+      "Suggestion": "Already very healthy. Serve with brown rice for added fiber.",
+      "ImageSource": ""
+    },
+    {
+      "RecipeName": "Quinoa Upma",
+      "Ingredients": "Quinoa, Mixed vegetables, Mustard seeds, Curry leaves, Lemon juice",
+      "BriefInstructions": [
+        "Step 1: Rinse quinoa and set aside.",
+        "Step 2: Temper mustard seeds and curry leaves in oil.",
+        "Step 3: Add vegetables and sauté until tender.",
+        "Step 4: Add quinoa and water, cook until quinoa is fluffy.",
+        "Step 5: Squeeze lemon juice, mix well, and serve hot."
+      ],
+      "Category": "gluten-free",
+      "HealthinessPercentage": 95,
+      "Suggestion": "Add nuts or seeds for extra protein and healthy fats.",
+      "ImageSource": ""
+    },
+    {
+      "RecipeName": "Chicken Tikka",
+      "Ingredients": "Chicken, Yogurt, Lemon juice, Spices",
+      "BriefInstructions": [
+        "Step 1: Marinate chicken in yogurt, lemon juice, and spices for 2 hours.",
+        "Step 2: Thread marinated chicken onto skewers.",
+        "Step 3: Grill or bake until chicken is cooked through and charred.",
+        "Step 4: Serve hot with mint chutney and lemon wedges."
+      ],
+      "Category": "gluten-free",
+      "HealthinessPercentage": 85,
+      "Suggestion": "Use skinless chicken breast for a leaner option.",
+      "ImageSource": ""
+    },
+    {
+      "RecipeName": "Masala Omelette",
+      "Ingredients": "Eggs, Onion, Tomato, Green chili, Coriander, Spices",
+      "BriefInstructions": [
+        "Step 1: Beat eggs with chopped vegetables and spices.",
+        "Step 2: Heat oil in a pan and pour the egg mixture.",
+        "Step 3: Cook until the bottom is golden brown.",
+        "Step 4: Flip and cook the other side.",
+        "Step 5: Fold and serve hot with chutney or ketchup."
+      ],
+      "Category": "quick-meals",
+      "HealthinessPercentage": 80,
+      "Suggestion": "Use one whole egg and two egg whites for a lower-fat version.",
+      "ImageSource": "https://maunikagowardhan.co.uk/wp-content/uploads/2012/09/Masala-Omelette-32.jpg"
+    },
+    {
+      "RecipeName": "Kachumber Salad",
+      "Ingredients": "Cucumber, Tomato, Onion, Lemon juice, Chaat masala",
+      "BriefInstructions": [
+        "Step 1: Chop cucumber, tomato, and onion into small cubes.",
+        "Step 2: Mix vegetables in a bowl.",
+        "Step 3: Add lemon juice and chaat masala.",
+        "Step 4: Toss well and serve chilled."
+      ],
+      "Category": "quick-meals",
+      "HealthinessPercentage": 100,
+      "Suggestion": "Already very healthy. Add sprouted beans for extra protein.",
+      "ImageSource": "https://www.archanaskitchen.com//images/archanaskitchen/1-Author/Jyothi_Rajesh/Kachumber_Salad__Cucumber_Salad.jpg"
+    }
+  ]

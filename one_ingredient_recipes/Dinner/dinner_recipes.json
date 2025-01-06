@@ -1,0 +1,139 @@
+[
+    {
+        "RecipeName": "Butter Chicken",
+        "Ingredients": "Chicken, Butter, Cream, Tomato, Onion",
+        "BriefInstructions": [
+            "Step 1: Marinate chicken with yogurt, spices, and lemon juice for 1 hour.",
+            "Step 2: Grill or fry the marinated chicken until lightly browned.",
+            "Step 3: Heat butter in a pan and sauté onions until golden.",
+            "Step 4: Add pureed tomatoes, garlic, and ginger; cook until thickened.",
+            "Step 5: Stir in cream and adjust seasoning with salt and spices.",
+            "Step 6: Add cooked chicken and simmer for 10 minutes.",
+            "Step 7: Garnish with fresh coriander and serve hot."
+        ],
+        "Category": "Dinner",
+        "HealthinessPercentage": 55,
+        "Suggestion": "Use less butter and cream or replace with yogurt for a healthier version.",
+        "ImageSource": "https://feelgoodfoodie.net/wp-content/uploads/2024/02/Easy-Butter-Chicken-TIMG.jpg"
+    },
+    {
+        "RecipeName": "Paneer Butter Masala",
+        "Ingredients": "Paneer, Butter, Tomato, Cream, Spices",
+        "BriefInstructions": [
+            "Step 1: Cut paneer into cubes and lightly fry them; set aside.",
+            "Step 2: Heat butter in a pan and sauté onions until golden.",
+            "Step 3: Add pureed tomatoes, ginger, and garlic; cook until thickened.",
+            "Step 4: Stir in cream, spices, and salt.",
+            "Step 5: Add paneer cubes and cook for 5 minutes.",
+            "Step 6: Garnish with coriander and serve with naan or rice."
+        ],
+        "Category": "Dinner",
+        "HealthinessPercentage": 60,
+        "Suggestion": "Use low-fat cream or yogurt to reduce calories.",
+        "ImageSource": "https://www.secondrecipe.com/wp-content/uploads/2021/08/roti-paneer-butter-masala.jpg"
+    },
+    {
+        "RecipeName": "Dal Tadka",
+        "Ingredients": "Lentils, Onion, Tomato, Garlic, Ghee",
+        "BriefInstructions": [
+            "Step 1: Cook lentils with water, turmeric, and salt until soft.",
+            "Step 2: Heat ghee and temper with cumin seeds, garlic, and red chilies.",
+            "Step 3: Add chopped onions and tomatoes; cook until softened.",
+            "Step 4: Pour the tempering over the cooked lentils and mix well.",
+            "Step 5: Garnish with fresh coriander and serve hot with rice."
+        ],
+        "Category": "Dinner",
+        "HealthinessPercentage": 75,
+        "Suggestion": "Use olive oil instead of ghee for a healthier option.",
+        "ImageSource": "https://cinnamonsnail.com/wp-content/uploads/2023/04/Arhar-Dal-Feature-1-of-1.jpg"
+    },
+    {
+        "RecipeName": "Vegetable Biryani",
+        "Ingredients": "Rice, Mixed Vegetables, Spices, Yogurt",
+        "BriefInstructions": [
+            "Step 1: Soak rice for 30 minutes and cook until 80% done.",
+            "Step 2: Sauté vegetables with spices in oil.",
+            "Step 3: Layer rice and vegetables in a pot, adding yogurt and fried onions.",
+            "Step 4: Seal the pot and cook on low heat for 20 minutes.",
+            "Step 5: Garnish with coriander and serve hot with raita."
+        ],
+        "Category": "Dinner",
+        "HealthinessPercentage": 70,
+        "Suggestion": "Use brown rice for added fiber and nutrition.",
+        "ImageSource": "https://www.madhuseverydayindian.com/wp-content/uploads/2022/11/easy-vegetable-biryani.jpg"
+    },
+    {
+        "RecipeName": "Rajma Curry",
+        "Ingredients": "Kidney Beans, Onion, Tomato, Garlic, Spices",
+        "BriefInstructions": [
+            "Step 1: Soak and boil kidney beans until soft.",
+            "Step 2: Heat oil and sauté onions, garlic, and ginger until golden.",
+            "Step 3: Add pureed tomatoes and spices; cook until thickened.",
+            "Step 4: Mix in boiled beans and simmer for 10 minutes.",
+            "Step 5: Garnish with fresh coriander and serve with rice or roti."
+        ],
+        "Category": "Dinner",
+        "HealthinessPercentage": 80,
+        "Suggestion": "Replace oil with a non-stick spray for lower fat content.",
+        "ImageSource": "https://www.cubesnjuliennes.com/wp-content/uploads/2020/06/Authentic-Punjabi-Rajma-Recipe.jpg"
+    },
+    {
+        "RecipeName": "Aloo Gobi",
+        "Ingredients": "Potato, Cauliflower, Spices, Tomato",
+        "BriefInstructions": [
+            "Step 1: Heat oil and sauté spices and chopped onions.",
+            "Step 2: Add diced potatoes and cauliflower florets.",
+            "Step 3: Stir in tomatoes and cook until vegetables are tender.",
+            "Step 4: Garnish with coriander and serve hot with roti."
+        ],
+        "Category": "Dinner",
+        "HealthinessPercentage": 85,
+        "Suggestion": "Add peas or spinach for extra nutrients.",
+        "ImageSource": "https://static01.nyt.com/images/2023/12/21/multimedia/ND-Aloo-Gobi-gkwc/ND-Aloo-Gobi-gkwc-mediumSquareAt3X.jpg"
+    },
+    {
+        "RecipeName": "Palak Paneer",
+        "Ingredients": "Spinach, Paneer, Cream, Spices",
+        "BriefInstructions": [
+            "Step 1: Blanch spinach and grind to a smooth paste.",
+            "Step 2: Sauté spices and onions in oil.",
+            "Step 3: Add spinach paste, paneer cubes, and cream; cook for 5 minutes.",
+            "Step 4: Garnish with butter and serve with naan or rice."
+        ],
+        "Category": "Dinner",
+        "HealthinessPercentage": 75,
+        "Suggestion": "Use low-fat paneer and cream for a healthier version.",
+        "ImageSource": "https://www.munatycooking.com/wp-content/uploads/2022/09/palak-paneer-feature-1200-x-1200-500x375.jpg"
+    },
+    {
+        "RecipeName": "Chole Masala",
+        "Ingredients": "Chickpeas, Onion, Tomato, Spices",
+        "BriefInstructions": [
+            "Step 1: Soak and boil chickpeas until soft.",
+            "Step 2: Sauté onions, ginger, and garlic in oil until golden.",
+            "Step 3: Add pureed tomatoes and spices; cook until thickened.",
+            "Step 4: Mix in boiled chickpeas and simmer for 10 minutes.",
+            "Step 5: Garnish with coriander and serve with rice or bhature."
+        ],
+        "Category": "Dinner",
+        "HealthinessPercentage": 80,
+        "Suggestion": "Use olive oil instead of regular oil for better health.",
+        "ImageSource": "https://www.ticklingpalates.com/wp-content/uploads/2022/07/chana-masala-recipe.jpg"
+    },
+    {
+        "RecipeName": "Fish Curry",
+        "Ingredients": "Fish, Coconut Milk, Spices, Tamarind",
+        "BriefInstructions": [
+            "Step 1: Marinate fish with turmeric and salt for 15 minutes.",
+            "Step 2: Sauté spices, onions, and tomatoes in oil.",
+            "Step 3: Add coconut milk and tamarind paste; simmer.",
+            "Step 4: Add fish pieces and cook until done.",
+            "Step 5: Serve hot with rice."
+        ],
+        "Category": "Dinner",
+        "HealthinessPercentage": 70,
+        "Suggestion": "Use less coconut milk or replace with almond milk for a lighter option.",
+        "ImageSource": "https://www.licious.in/blog/wp-content/uploads/2022/03/shutterstock_1891229335-min.jpg"
+    }
+    
+]

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DesiFusion</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.11/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /*! tailwindcss v3.4.11 | MIT License | https://tailwindcss.com*/
+    /* Your existing styles will remain here */
+    /* If you want to copy any custom styles, you can paste them below */
+  </style>
+</head>
+<body>
+  <div id="webcrumbs"> 
+    <div class="w-[960px] bg-white rounded-lg shadow-md">
+      <header class="bg-primary-500 text-primary-50 py-4">
+        <div class="flex justify-between items-center px-6">
+          <a href="/" class="text-2xl font-title">DesiFusion</a>
+          <nav>
+            <ul class="flex gap-6">
+              <li>
+                <a href="/" class="hover:text-neutral-300">Home</a>
+              </li>
+              <li>
+                <a href="/recipes" class="hover:text-neutral-300">Recipes</a>
+              </li>
+              <li>
+                <a href="/about" class="hover:text-neutral-300">About</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main class="p-6">
+        <section class="mb-6">
+          <div class="flex flex-col items-center">
+            <img
+              src="https://tools-api.webcrumbs.org/image-placeholder/120/120/avatars/1"
+              alt="User Avatar"
+              class="w-[120px] h-[120px] rounded-full object-contain mb-4"
+            />
+            <h2 class="text-2xl font-title"><%= user.name %></h2>
+            <p class="text-neutral-700"><%= user.bio %></p>
+          </div>
+        </section>
+        <section class="mb-6">
+          <h3 class="text-xl font-semibold mb-4">Profile Information</h3>
+          <form action="/update-profile" method="POST" class="space-y-4">
+            <div>
+              <label for="name" class="block mb-1">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="w-full p-3 border rounded-md"
+                value="<%= user.name %>"
+              />
+            </div>
+            <div>
+              <label for="email" class="block mb-1">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="w-full p-3 border rounded-md"
+                value="<%= user.email %>"
+              />
+            </div>
+            <div>
+              <label for="bio" class="block mb-1">Bio</label>
+              <textarea
+                id="bio"
+                name="bio"
+                rows="4"
+                class="w-full p-3 border rounded-md"
+              >
+                <%= user.bio %>
+              </textarea>
+            </div>
+            <button type="submit" class="bg-primary-500 text-primary-50 px-6 py-3 rounded-md">
+              Update Profile
+            </button>
+          </form>
+        </section>
+        <section class="border-t pt-6">
+          <h3 class="text-xl font-semibold mb-4">Change Password</h3>
+          <form action="/change-password" method="POST" class="space-y-4">
+            <div>
+              <label for="currentPassword" class="block mb-1">Current Password</label>
+              <input
+                type="password"
+                id="currentPassword"
+                name="currentPassword"
+                class="w-full p-3 border rounded-md"
+              />
+            </div>
+            <div>
+              <label for="newPassword" class="block mb-1">New Password</label>
+              <input
+                type="password"
+                id="newPassword"
+                name="newPassword"
+                class="w-full p-3 border rounded-md"
+              />
+            </div>
+            <div>
+              <label for="confirmPassword" class="block mb-1">Confirm New Password</label>
+              <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                class="w-full p-3 border rounded-md"
+              />
+            </div>
+            <button type="submit" class="bg-primary-500 text-primary-50 px-6 py-3 rounded-md">
+              Change Password
+            </button>
+          </form>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

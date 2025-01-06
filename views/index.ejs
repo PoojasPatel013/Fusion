@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DesiFusion - Culinary Guide of India</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #db380f;
+            --secondary-color: #226230;
+            --accent-color: #f1c40f;
+            --text-color: #3b3836;
+            --bg-color: #f9f5f1;
+            --sidebar-bg: #e6f2ff; /* New light blue background for sidebar */
+            --sidebar-text: #1a5f7a; /* New dark blue text for sidebar */
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: var(--primary-color);
+            color: #fff;
+            padding: 1.5rem 0; /* Increased padding for larger header */
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 2rem; /* Increased font size for larger header */
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .dropdown-content a {
+            color: var(--text-color);
+            padding: 0.75rem 1.25rem;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        main {
+            margin-top: 80px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hero {
+            background-image: url('https://plus.unsplash.com/premium_photo-1694506374374-80abb779c582?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .search-form {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .search-form select, .search-form input[type="submit"] {
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 30px;
+        }
+
+        .search-form select {
+            margin-right: 1rem;
+            background-color: #fff;
+            color: var(--text-color);
+        }
+
+        .search-form input[type="submit"] {
+            background-color: var(--accent-color);
+            color: var(--text-color);
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .search-form input[type="submit"]:hover {
+            background-color: #e1b60e;
+            transform: scale(1.05);
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 4rem 2rem;
+            background-color: #fff;
+        }
+
+        .feature {
+            flex-basis: calc(25% - 2rem);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .feature i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .image-gallery {
+            display: flex;
+            justify-content: space-between;
+            gap: 1.5rem;
+            padding: 4rem 2rem;
+            background-color: var(--bg-color);
+        }
+
+        .image-gallery img {
+            width: calc(25% - 1.125rem);
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background: var(--secondary-color);
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-section {
+            flex-basis: calc(25% - 2rem);
+            margin-bottom: 1rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul {
+                flex-direction: column;
+                margin-top: 1rem;
+            }
+
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+
+            .dropdown-content {
+                position: static;
+                display: none;
+                width: 100%;
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: none;
+            }
+
+            .feature {
+                flex-basis: calc(50% - 2rem);
+            }
+
+            .footer-section {
+                flex-basis: calc(50% - 2rem);
+            }
+
+            .search-form {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .search-form select, .search-form input[type="submit"] {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .feature, .footer-section {
+                flex-basis: 100%;
+            }
+        }
+
+        .user-dashboard {
+            position: fixed;
+            top: 90px; /* Adjusted to account for larger header */
+            right: -300px;
+            width: 300px;
+            height: calc(100vh - 90px); /* Adjusted to account for larger header */
+            background-color: var(--sidebar-bg);
+            color: var(--sidebar-text);
+            transition: right 0.3s ease;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+
+        .dashboard-toggle {
+            position: fixed;
+            top: 100px; /* Adjusted to account for larger header */
+            right: 10px;
+            background-color: var(--sidebar-bg);
+            color: var(--sidebar-text);
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .user-dashboard.open {
+            right: 0;
+        }
+
+        .dashboard-toggle {
+            position: fixed;
+            top: 90px;
+            right: 10px;
+            background-color: var(--secondary-color);
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .user-dashboard-header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .user-dashboard-header img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .user-dashboard-menu {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .user-dashboard-menu li {
+            margin-bottom: 10px;
+        }
+
+        .user-dashboard-menu a {
+            color: var(--sidebar-text);
+            text-decoration: none;
+            display: block;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .user-dashboard-menu a:hover, .user-dashboard-menu a.active {
+            background-color: rgba(26, 95, 122, 0.1);
+        }
+
+        .user-dashboard-content {
+            padding: 20px;
+        }
+
+        .user-dashboard-section {
+            display: none;
+        }
+
+        .user-dashboard-section.active {
+            display: block;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        .dashboard-btn {
+            background-color: var(--accent-color);
+            color: var(--text-color);
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dashboard-btn:hover {
+            background-color: #e1b60e;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="/" class="logo">DesiFusion</a>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="#">Explore Recipes</a>
+                        <div class="dropdown-content">
+                            <a href="/category/popular">Popular Recipes</a>
+                            <a href="/category/latest">Latest Recipes</a>
+                            <a href="/category/vegetarian">Vegetarian</a>
+                            <a href="/category/vegan">Vegan</a>
+                            <a href="/category/gluten-free">Gluten-Free</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Royal Houses</a>
+                        <div class="dropdown-content">
+                            <a href="/royalhouses?house=rajputana">House of Rajputana</a>
+                            <a href="/royalhouses?house=lucknow">Nawabs of Lucknow</a>
+                            <a href="/royalhouses?house=maratha">House of Maratha</a>
+                            <a href="/royalhouses?house=mysore">House of Mysore</a>
+                            <a href="/royalhouses?house=sindh">Royalty of Sindh</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Servings</a>
+                        <div class="dropdown-content">
+                            <a href="/region/Snack">Quick Snack</a>
+                            <a href="/region/Meal">Fill the Tummy - Meal</a>
+                            <a href="/region/Dinner">Food Before Sleep</a>
+                            <a href="/region/Breakfast">Wake-Up Food</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <% if (user) { %>
+                <button class="dashboard-toggle" id="dashboardToggle">
+                    <img src="<%= user.avatar || 'https://cdn-icons-png.flaticon.com/512/6596/6596121.png' %>" alt="User Avatar" style="width: 32px; height: 32px; border-radius: 50%;">
+                </button>
+            <% } else { %>
+                <a href="/login" class="login-button">Login</a>
+            <% } %>
+        </div>
+
+        <button class="dashboard-toggle" id="dashboardToggle">
+            <i class="fas fa-user"></i>
+        </button>
+    
+        <div class="user-dashboard" id="userDashboard">
+            <div class="user-dashboard-header">
+                <img src="<%= user ? user.avatar : 'https://cdn-icons-png.flaticon.com/512/6596/6596121.png' %>" alt="User Avatar" id="userAvatar">
+                <h2 id="userName"><%= user ? user.name : 'Guest' %></h2>
+            </div>
+            <ul class="user-dashboard-menu">
+                <li><a href="/dashboard" class="active"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="/profile"><i class="fas fa-user"></i> Profile</a></li>
+                <li><a href="/account"><i class="fas fa-cog"></i> Account Settings</a></li>
+                <li><a href="/logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Discover the Flavors of India</h1>
+                <p>Explore simple, delicious one-ingredient recipes from across the Indian subcontinent</p>
+                <form class="search-form" action="/search" method="GET">
+                    <select name="region" required>
+                        <option value="">Select a Region</option>
+                        <option value="North">North India</option>
+                        <option value="South">South India</option>
+                        <option value="East">East India</option>
+                        <option value="West">West India</option>
+                    </select>
+                    <input type="submit" value="Explore Recipes">
+                </form>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature">
+                <i class="fas fa-utensils"></i>
+                <h3>Authentic Recipes</h3>
+                <p>Discover traditional dishes from various Indian regions</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-clock"></i>
+                <h3>Quick & Easy</h3>
+                <p>Simple one-ingredient recipes for busy cooks</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-crown"></i>
+                <h3>Royal Cuisines</h3>
+                <p>Taste the luxury of India's royal kitchens</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-leaf"></i>
+                <h3>Dietary Options</h3>
+                <p>Find vegetarian, vegan, and gluten-free recipes</p>
+            </div>
+        </section>
+
+        <section id="featured-recipes" class="image-gallery">
+            <img src="/assets/pic1.jpg" alt="Red chili lot on ground">
+            <img src="/assets/pic2.jpg" alt="Three bowls of tomato soup">
+            <img src="/assets/pic3.jpg" alt="Plate of food on black surface">
+            <img src="/assets/pic4.jpg" alt="Sink full of food">
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/faq">FAQ</a></li>
+                    <li><a href="/privacy">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Popular Categories</h3>
+                <ul>
+                    <li><a href="/category/vegetarian">Vegetarian</a></li>
+                    <li><a href="/category/vegan">Vegan</a></li>
+                    <li><a href="/category/gluten-li><a href="/category/gluten-free">Gluten-Free</a></li>
+                    <li><a href="/category/quick-meals">Quick Meals</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Subscribe to our newsletter for the latest recipes and cooking tips.</p>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <p>&copy; 2024 DesiFusion - Culinary Guide of India. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuToggle = document.createElement('button');
+            mobileMenuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            mobileMenuToggle.classList.add('mobile-menu-toggle');
+            document.querySelector('.header-content').prepend(mobileMenuToggle);
+    
+            mobileMenuToggle.addEventListener('click', () => {
+                document.querySelector('nav ul').classList.toggle('show');
+            });
+    
+            document.querySelectorAll('.dropdown').forEach(dropdown => {
+                const link = dropdown.querySelector('a');
+                const content = dropdown.querySelector('.dropdown-content');
+    
+                link.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+                    }
+                });
+            });
+    
+            const newsletterForm = document.getElementById('newsletter-form');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    const email = this.querySelector('input[type="email"]').value;
+                    alert(`Thank you for subscribing with email: ${email}`);
+                    this.reset();
+                });
+            }
+    
+            const backToTop = document.createElement('button');
+            backToTop.innerHTML = '<i class="fas fa-arrow-up"></i>';
+            backToTop.classList.add('back-to-top');
+            document.body.appendChild(backToTop);
+    
+            window.addEventListener('scroll', () => {
+                backToTop.style.display = window.pageYOffset > 100 ? 'block' : 'none';
+            });
+    
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+    
+            const loadUserData = async () => {
+                try {
+                    const response = await fetch('/user');
+                    if (!response.ok) throw new Error('Failed to fetch user data');
+    
+                    const userData = await response.json();
+                    document.getElementById('userName').textContent = userData.name;
+                    document.getElementById('userAvatar').src = userData.avatar || '/assets/default-avatar.png';
+                    document.getElementById('name').value = userData.name;
+                    document.getElementById('email').value = userData.email;
+                    document.getElementById('bio').value = userData.bio;
+                } catch (error) {
+                    console.error('Error loading user data:', error);
+                    alert('Error loading user data. Please try again later.');
+                }
+            };
+    
+            const dashboardToggle = document.getElementById('dashboardToggle');
+            const userDashboard = document.getElementById('userDashboard');
+            const dashboardLinks = document.querySelectorAll('.user-dashboard-menu a');
+            const dashboardSections = document.querySelectorAll('.user-dashboard-section');
+    
+            if (dashboardToggle) {
+                dashboardToggle.addEventListener('click', () => {
+                    userDashboard.classList.toggle('open');
+                });
+            }
+            const loadDashboardContent = async (targetId) => {
+                try {
+                    const response = await fetch(`/${targetId}`);
+                    if (!response.ok) throw new Error(`Failed to fetch ${targetId} data`);
+
+                    const data = await response.json();
+                    const targetSection = document.querySelector('.user-dashboard-content');
+
+                    if (data.content && targetSection) {
+                        targetSection.innerHTML = data.content;
+                    } else {
+                        console.warn('No content found in API response.');
+                        targetSection.innerHTML = `<p>No content available for ${targetId}</p>`;
+                    }
+                } catch (error) {
+                    console.error(`Error loading ${targetId} data:`, error);
+                    alert(`Error loading ${targetId} data. Please try again later.`);
+                }
+            };
+            dashboardLinks.forEach(link => {
+    link.addEventListener('click', async function (e) {
+        const targetId = this.getAttribute('href').substring(1);
+        
+        // Check if targetId requires an AJAX call
+        if (targetId !== 'logout') {
+            e.preventDefault();
+            dashboardLinks.forEach(l => l.classList.remove('active'));
+            this.classList.add('active');
+
+            dashboardSections.forEach(section => {
+                section.classList.remove('active');
+                if (section.id === targetId) {
+                    section.classList.add('active');
+                }
+            });
+
+            await loadDashboardContent(targetId);
+        }
+    });
+});
+
+            const logoutLink = document.querySelector('a[href="/logout"]');
+            if (logoutLink) {
+                logoutLink.addEventListener('click', async (e) => {
+                    e.preventDefault();
+                    try {
+                        const response = await fetch('/logout', { method: 'POST' });
+                        if (response.ok) {
+                            window.location.href = '/';
+                        } else {
+                            throw new Error('Logout failed');
+                        }
+                    } catch (error) {
+                        console.error('Error during logout:', error);
+                        alert('Logout failed. Please try again.');
+                    }
+                });
+            }
+            const profileForm = document.getElementById('profileForm');
+            if (profileForm) {
+                profileForm.addEventListener('submit', async function (e) {
+                    e.preventDefault();
+                    const formData = new FormData(this);
+    
+                    try {
+                        const response = await fetch('/update-profile', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(Object.fromEntries(formData)),
+                        });
+    
+                        if (response.ok) {
+                            alert('Profile updated successfully!');
+                            await loadUserData();
+                        } else {
+                            const error = await response.json();
+                            alert(`Error updating profile: ${error.error}`);
+                        }
+                    } catch (error) {
+                        console.error('Error updating profile:', error);
+                        alert('An unexpected error occurred');
+                    }
+                });
+            }
+            const passwordForm = document.getElementById('passwordForm');
+            if (passwordForm) {
+                passwordForm.addEventListener('submit', async function (e) {
+                    e.preventDefault();
+                    const formData = new FormData(this);
+    
+                    try {
+                        const response = await fetch('/change-password', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(Object.fromEntries(formData)),
+                        });
+    
+                        if (response.ok) {
+                            alert('Password changed successfully!');
+                        } else {
+                            const error = await response.json();
+                            alert(`Error changing password: ${error.error}`);
+                        }
+                    } catch (error) {
+                        console.error('Error changing password:', error);
+                        alert('An unexpected error occurred');
+                    }
+                });
+            }
+            loadUserData();
+            if (userDashboard) {
+                loadDashboardContent('dashboard');
+                document.getElementById('dashboard').classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>

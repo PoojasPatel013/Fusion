@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= region %> Recipes</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <h1><%= region %> Recipes</h1>
+        <nav>
+            <a href="/">Home</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="search-section">
+            <form id="search-form">
+                <input type="text" id="ingredient-search" placeholder="Search by ingredient">
+                <button type="submit">Search</button>
+            </form>
+        </section>
+
+        <section id="recipe-list">
+            <!-- Recipes will be dynamically inserted here -->
+        </section>
+
+        <button id="load-more" style="display: none;">Load More</button>
+    </main>
+
+    <script>
+        const region = '<%= region %>';
+        let currentOffset = 0;
+        const limit = 8;
+
+        function displayRecipes(recipes) {
+            const recipeList = document.getElementById('recipe-list');
+            recipes.forEach((recipe, index) => {
+                const recipeElement = document.createElement('div');
+                recipeElement.classList.add('recipe-item');
+                recipeElement.innerHTML = `
+                    <h2>${recipe.RecipeName}</h2>
+                    <p><strong>Ingredients:</strong> ${recipe.Ingredients}</p>
+                    <a href="/recipe/${region}/${currentOffset + index}">View Recipe</a>
+                `;
+                recipeList.appendChild(recipeElement);
+            });
+        }
+
+        async function fetchRecipes(ingredient = '') {
+            const response = await fetch(`/api/recipes?region=${region}&ingredient=${ingredient}&offset=${currentOffset}&limit=${limit}`);
+            const recipes = await response.json();
+            displayRecipes(recipes);
+            currentOffset += recipes.length;
+            document.getElementById('load-more').style.display = recipes.length === limit ? 'block' : 'none';
+        }
+
+        document.getElementById('search-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const ingredient = document.getElementById('ingredient-search').value;
+            document.getElementById('recipe-list').innerHTML = '';
+            currentOffset = 0;
+            await fetchRecipes(ingredient);
+        });
+
+        document.getElementById('load-more').addEventListener('click', () => {
+            const ingredient = document.getElementById('ingredient-search').value;
+            fetchRecipes(ingredient);
+        });
+
+        // Initial load
+        fetchRecipes();
+    </script>
+</body>
+</html>

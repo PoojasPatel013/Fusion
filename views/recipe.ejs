@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= recipe.RecipeName %> | DesiFusion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #b5651d;
+            --secondary-color: #4b4b4b;
+            --accent-color: #f5f3e6;
+            --text-color: #333;
+            --bg-color: #fff;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--accent-color);
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--bg-color);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-family: 'Merriweather', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+
+        nav ul li a {
+            color: var(--bg-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 6rem auto 2rem;
+            padding: 2rem;
+            background-color: var(--bg-color);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .recipe-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .recipe-title {
+            font-family: 'Merriweather', serif;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .recipe-category {
+            font-size: 1rem;
+            color: var(--secondary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .recipe-image-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .recipe-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .recipe-image:hover {
+            transform: scale(1.05);
+        }
+
+        .recipe-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .recipe-section {
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-family: 'Merriweather', serif;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .ingredients-list, .instructions-list {
+            padding-left: 1.5rem;
+        }
+
+        .ingredients-list li, .instructions-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        .health-info {
+            background-color: var(--accent-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .healthiness-bar {
+            background-color: #e0e0e0;
+            height: 10px;
+            border-radius: 5px;
+            margin-top: 0.5rem;
+            overflow: hidden;
+        }
+
+        .healthiness-fill {
+            height: 100%;
+            background-color: #4CAF50;
+            width: 0;
+            transition: width 1s ease-in-out;
+        }
+
+        .suggestion {
+            margin-top: 1rem;
+            font-style: italic;
+        }
+
+        .back-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--bg-color);
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            margin-top: 2rem;
+        }
+
+        .back-button:hover {
+            background-color: #9d4b18;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: var(--bg-color);
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .recipe-content {
+                grid-template-columns: 1fr;
+            }
+
+            .recipe-image-container {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">DesiFusion</div>
+            <nav>
+                <ul>
+                    <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="/region/<%= recipe.Category %>"><i class="fas fa-utensils"></i> <%= recipe.Category %> Recipes</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article class="recipe">
+            <div class="recipe-header">
+                <h1 class="recipe-title"><%= recipe.RecipeName %></h1>
+                <p class="recipe-category"><%= recipe.Category %></p>
+            </div>
+
+            <div class="recipe-image-container">
+                <img src="<%= recipe.ImageSource %>" alt="<%= recipe.RecipeName %>" class="recipe-image">
+            </div>
+
+            <div class="recipe-content">
+                <section class="recipe-section">
+                    <h2 class="section-title">Ingredients</h2>
+                    <ul class="ingredients-list">
+                        <% recipe.Ingredients.split(', ').forEach(ingredient => { %>
+                            <li><%= ingredient %></li>
+                        <% }); %>
+                    </ul>
+                </section>
+
+                <section class="recipe-section">
+                    <h2 class="section-title">Instructions</h2>
+                    <ol class="instructions-list">
+                        <% recipe.BriefInstructions.forEach((step) => { %>
+                            <li><%= step %></li>
+                        <% }); %>
+                    </ol>
+                </section>
+            </div>
+
+            <div class="health-info">
+                <h2 class="section-title">Healthiness</h2>
+                <p>Healthiness Score: <%= recipe.HealthinessPercentage %>%</p>
+                <div class="healthiness-bar">
+                    <div class="healthiness-fill" style="width: <%= recipe.HealthinessPercentage %>%;"></div>
+                </div>
+                <p class="suggestion"><strong>Suggestion:</strong> <%= recipe.Suggestion %></p>
+            </div>
+
+            <a href="/region/<%= recipe.Category %>" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to <%= recipe.Category %> Recipes
+            </a>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 DesiFusion. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const healthinessFill = document.querySelector('.healthiness-fill');
+            setTimeout(() => {
+                healthinessFill.style.width = '<%= recipe.HealthinessPercentage %>%';
+            }, 100);
+        });
+    </script>
+</body>
+</html>
