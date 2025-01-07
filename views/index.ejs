@@ -331,10 +331,10 @@
 
         .user-dashboard {
             position: fixed;
-            top: 90px; /* Adjusted to account for larger header */
+            top: 100px; 
             right: -300px;
             width: 300px;
-            height: calc(100vh - 90px); /* Adjusted to account for larger header */
+            height: calc(120vh - 90px); 
             background-color: var(--sidebar-bg);
             color: var(--sidebar-text);
             transition: right 0.3s ease;
@@ -344,7 +344,7 @@
 
         .dashboard-toggle {
             position: fixed;
-            top: 100px; /* Adjusted to account for larger header */
+            top: 100px;
             right: 10px;
             background-color: var(--sidebar-bg);
             color: var(--sidebar-text);
@@ -579,7 +579,7 @@
                 <ul>
                     <li><a href="/category/vegetarian">Vegetarian</a></li>
                     <li><a href="/category/vegan">Vegan</a></li>
-                    <li><a href="/category/gluten-li><a href="/category/gluten-free">Gluten-Free</a></li>
+                    <li><a href="/category/gluten-free">Gluten-Free</a></li>
                     <li><a href="/category/quick-meals">Quick Meals</a></li>
                 </ul>
             </div>
@@ -699,8 +699,6 @@
             dashboardLinks.forEach(link => {
     link.addEventListener('click', async function (e) {
         const targetId = this.getAttribute('href').substring(1);
-        
-        // Check if targetId requires an AJAX call
         if (targetId !== 'logout') {
             e.preventDefault();
             dashboardLinks.forEach(l => l.classList.remove('active'));
@@ -717,7 +715,6 @@
         }
     });
 });
-
             const logoutLink = document.querySelector('a[href="/logout"]');
             if (logoutLink) {
                 logoutLink.addEventListener('click', async (e) => {

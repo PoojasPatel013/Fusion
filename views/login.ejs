@@ -170,7 +170,6 @@
             form.addEventListener('submit', function(e) {
                 let isValid = true;
 
-                // Email validation
                 if (!emailInput.value.match(/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/)) {
                     emailError.textContent = 'Please enter a valid email address';
                     emailError.style.display = 'block';
@@ -180,8 +179,6 @@
                     emailError.style.display = 'none';
                     emailInput.classList.remove('shake');
                 }
-
-                // Password validation
                 if (passwordInput.value.length < 6) {
                     passwordError.textContent = 'Password must be at least 6 characters long';
                     passwordError.style.display = 'block';
@@ -196,8 +193,6 @@
                     e.preventDefault();
                 }
             });
-
-            // Remove shake class after animation ends
             [emailInput, passwordInput].forEach(input => {
                 input.addEventListener('animationend', function() {
                     this.classList.remove('shake');
