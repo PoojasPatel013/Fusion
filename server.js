@@ -9,7 +9,7 @@ const MongoStore = require('connect-mongo');
 
 const PORT = 3000;
 const app = express();
-const dataDir = path.resolve(__dirname, 'one_ingredient_recipes'); // Base directory for recipes
+const dataDir = path.resolve(__dirname, 'one_ingredient_recipes'); 
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
@@ -42,7 +42,6 @@ const connectToDB = async () => {
 };
 
 connectToDB();
-
 const isAuthenticated = (req, res, next) => {
     if (req.session.userId) {
         next();
@@ -59,7 +58,6 @@ const loadData = (region) => {
         console.error(`File not found: ${filePath}`);
         return [];
     }
-
     try {
         const data = fs.readFileSync(filePath, 'utf8');
         return JSON.parse(data);
@@ -68,7 +66,6 @@ const loadData = (region) => {
         return [];
     }
 };
-
 app.post("/register", async (req, res) => {
     try {
         const { username, email, password } = req.body;
@@ -87,7 +84,6 @@ app.post("/register", async (req, res) => {
         res.status(400).send('Registration failed. Please try again.');
     }
 });
-
 app.post('/login', async (req, res) => {
     try {
         const { email, password } = req.body;
@@ -133,7 +129,6 @@ app.get('/search', (req, res) => {
             recipe.Ingredients.toLowerCase().includes(ingredient.toLowerCase())
         );
     }
-
     res.render('region', { region, recipes, ingredient: ingredient || '' });
 });
 
@@ -153,7 +148,6 @@ app.get('/api/recipes', (req, res) => {
             recipe.Ingredients.toLowerCase().includes(ingredient.toLowerCase())
         );
     }
-
     const paginatedRecipes = recipes.slice(startIndex, endIndex);
     res.json(paginatedRecipes);
 });
