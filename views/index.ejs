@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary-color: #db380f;
-            --secondary-color: #226230;
+             --primary-color: #db380f; 
+             --secondary-color: #226230; 
             --accent-color: #f1c40f;
             --text-color: #3b3836;
             --bg-color: #f9f5f1;
@@ -28,15 +28,13 @@
             flex-direction: column;
             min-height: 100vh;
         }
-
         header {
-            background: var(--primary-color);
-            color: #fff;
+            background: rgb(224, 162, 46);
+            color: #211010;
             padding: 1.5rem 0; 
-            position: fixed;
+            position: absolute;
             width: 100%;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         .header-content {
@@ -129,10 +127,11 @@
         }
 
         .hero {
-            background-image: url('https://plus.unsplash.com/premium_photo-1694506374374-80abb779c582?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-image: url('./assets/Homeicon.jpeg');
             background-size: cover;
             background-position: center;
             height: 70vh;
+            
             display: flex;
             align-items: center;
             justify-content: center;
@@ -140,7 +139,49 @@
             color: #fff;
             position: relative;
         }
+        
+        .restricted-content {
+            filter: blur(5px);
+            pointer-events: none;
+        }
 
+        .login-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+
+        .login-message {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .login-message h2 {
+            margin-bottom: 1rem;
+        }
+
+        .login-message a {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: var(--accent-color);
+            color: var(--text-color);
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-message a:hover {
+            background-color: #e1b60e;
+        }
         .hero::before {
             content: '';
             position: absolute;
@@ -217,32 +258,9 @@
             color: var(--primary-color);
             margin-bottom: 1rem;
         }
-
-        .image-gallery {
-            display: flex;
-            justify-content: space-between;
-            gap: 1.5rem;
-            padding: 4rem 2rem;
-            background-color: var(--bg-color);
-        }
-
-        .image-gallery img {
-            width: calc(25% - 1.125rem);
-            height: 250px;
-            object-fit: cover;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .image-gallery img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-        }
-
         footer {
             background: var(--secondary-color);
-            color: #fff;
+            color: rgba(33, 13, 13, 0.926);
             text-align: center;
             padding: 2rem 0;
         }
@@ -274,7 +292,7 @@
         }
 
         .footer-section ul li a {
-            color: #fff;
+            color: #241414;
             text-decoration: none;
         }
 
@@ -286,7 +304,7 @@
         }
 
         .social-icons a {
-            color: #fff;
+            color: #310505be;
             font-size: 1.5rem;
             transition: color 0.3s ease;
         }
@@ -345,8 +363,6 @@
                 flex-basis: 100%;
             }
         }
-
-        
         .user-dashboard {
             position: fixed;
             top: 100px; 
@@ -470,6 +486,7 @@
     </style> 
 </head>
 <body>
+    {}
     <header>
         <div class="header-content">
             <a href="/" class="logo">DesiFusion</a>
@@ -506,27 +523,16 @@
                     </li>
                 </ul>
             </nav>
-            <% if (user) { %>
-                <button class="dashboard-toggle" id="dashboardToggle">
-                    <img src="<%= user.avatar || 'https://cdn-icons-png.flaticon.com/512/6596/6596121.png' %>" alt="User Avatar" style="width: 32px; height: 32px; border-radius: 50%;">
-                </button>
-            <% } else { %>
-                <a href="/login" class="login-button">Login</a>
-            <% } %>
-        </div>
-    
-        <div class="user-dashboard" id="userDashboard">
-            <div class="user-dashboard-header">
-                <img src="<%= user ? user.avatar : 'https://cdn-icons-png.flaticon.com/512/6596/6596121.png' %>" alt="User Avatar" id="userAvatar">
-                <h2 id="userName"><%= user ? user.name : 'Guest' %></h2>
-            </div>
-            <ul class="user-dashboard-menu">
-                <li><a href="/dashboard" class="active"><i class="fas fa-home"></i> Dashboard</a></li>
-                <li><a href="/login" class="active"><i class= "fas fa-sign-in-alt"></i> Login</a></li>
-                <li><a href="/profile"><i class="fas fa-user"></i> Profile</a></li>
-                <li><a href="#account"><i class="fas fa-cog"></i> Account Settings</a></li>
-                <li><a href="/logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
-            </ul>
+            <% if (!user) { %>
+                <div class="login-overlay">
+                    <div class="login-message">
+                        <h2>Please Log In to Access Content</h2>
+                        <p>You need to be logged in to view the website's content.</p>
+                        <a href="/login">Log In</a>
+                    </div>
+                </div>
+                <% } %>
+        </div>        
     </header>
 
     <main>
@@ -546,38 +552,43 @@
                 </form>
             </div>
         </section>
-
-        <section class="features">
-            <div class="feature">
-                <i class="fas fa-utensils"></i>
-                <h3>Authentic Recipes</h3>
-                <p>Discover traditional dishes from various Indian regions</p>
+            <div class="<%= user ? '' : 'restricted-content' %>">
+                <div class="user-dashboard" id="userDashboard">
+                    <div class="user-dashboard-header">
+                        <img src="<%= user ? user.avatar : '' %>" alt="User Avatar" id="userAvatar">
+                        <h2 id="userName"><%= user ? user.name : 'Guest' %></h2>
+                    </div>
+                    <ul class="user-dashboard-menu">
+                        <li><a href="/dashboard" class="active"><i class="fas fa-home"></i> Dashboard</a></li>
+                        <li><a href="/login" class="active"><i class= "fas fa-sign-in-alt"></i> Login</a></li>
+                        <li><a href="/profile"><i class="fas fa-user"></i> Profile</a></li>
+                        <li><a href="#account"><i class="fas fa-cog"></i> Account Settings</a></li>
+                        <li><a href="/logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                    </ul>
             </div>
-            <div class="feature">
-                <i class="fas fa-clock"></i>
-                <h3>Quick & Easy</h3>
-                <p>Simple one-ingredient recipes for busy cooks</p>
-            </div>
-            <div class="feature">
-                <i class="fas fa-crown"></i>
-                <h3>Royal Cuisines</h3>
-                <p>Taste the luxury of India's royal kitchens</p>
-            </div>
-            <div class="feature">
-                <i class="fas fa-leaf"></i>
-                <h3>Dietary Options</h3>
-                <p>Find vegetarian, vegan, and gluten-free recipes</p>
-            </div>
-        </section>
-
-        <section id="featured-recipes" class="image-gallery">
-            <img src="/assets/pic1.jpg" alt="Red chili lot on ground">
-            <img src="/assets/pic2.jpg" alt="Three bowls of tomato soup">
-            <img src="/assets/pic3.jpg" alt="Plate of food on black surface">
-            <img src="/assets/pic4.jpg" alt="Sink full of food">
-        </section>
-    </main>
-    
+            <section class="features">
+                <div class="feature">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Authentic Recipes</h3>
+                    <p>Discover traditional dishes from various Indian regions</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-clock"></i>
+                    <h3>Quick & Easy</h3>
+                    <p>Simple one-ingredient recipes for busy cooks</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-crown"></i>
+                    <h3>Royal Cuisines</h3>
+                    <p>Taste the luxury of India's royal kitchens</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Dietary Options</h3>
+                    <p>Find vegetarian, vegan, and gluten-free recipes</p>
+                </div>
+            </section>
+        </main>
     <footer>
         <div class="footer-content">
             <div class="footer-section">
@@ -628,7 +639,7 @@
             document.querySelector('.header-content').prepend(mobileMenuToggle);
     
             mobileMenuToggle.addEventListener('click', () => {
-                document.querySelector('nav ul').classList.toggle('show');
+                document.querySelector('header nav ul').classList.toggle('show');
             });
     
             document.querySelectorAll('.dropdown').forEach(dropdown => {
@@ -716,7 +727,6 @@
                 profileForm.addEventListener('submit', async function (e) {
                     e.preventDefault();
                     const formData = new FormData(this);
-    
                     try {
                         const response = await fetch('/update-profile', {
                             method: 'POST',
@@ -766,7 +776,13 @@
                 loadDashboardContent('dashboard');
                 document.getElementById('dashboard').classList.add('active');
             }
+        }
+        <% if (!user) { %>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('main').classList.add('restricted-content');
         });
+    <% } %>
+    );
     </script>
 </body>
 </html>
