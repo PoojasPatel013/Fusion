@@ -13,8 +13,8 @@
             --accent-color: #f1c40f;
             --text-color: #3b3836;
             --bg-color: #f9f5f1;
-            --sidebar-bg: #e6f2ff; /* New light blue background for sidebar */
-            --sidebar-text: #1a5f7a; /* New dark blue text for sidebar */
+            --sidebar-bg: #e6f2ff; 
+            --sidebar-text: #1a5f7a; 
         }
 
         body {
@@ -32,7 +32,7 @@
         header {
             background: var(--primary-color);
             color: #fff;
-            padding: 1.5rem 0; /* Increased padding for larger header */
+            padding: 1.5rem 0; 
             position: fixed;
             width: 100%;
             z-index: 1000;
@@ -66,7 +66,7 @@
         background-color: #e1b60e;
     }
         .logo {
-            font-size: 2rem; /* Increased font size for larger header */
+            font-size: 2rem; 
             font-weight: 700;
             color: #fff;
             text-decoration: none;
@@ -466,9 +466,7 @@
 
         .dashboard-btn:hover {
             background-color: #e1b60e;
-        }
-        
-    
+        } 
     </style> 
 </head>
 <body>
@@ -654,7 +652,6 @@
                     this.reset();
                 });
             }
-    
             const backToTop = document.createElement('button');
             backToTop.innerHTML = '<i class="fas fa-arrow-up"></i>';
             backToTop.classList.add('back-to-top');
@@ -678,11 +675,9 @@
                 document.getElementById('userName').textContent = userData.name;
                 document.getElementById('userAvatar').src = userData.avatar || '/assets/default-avatar.png';
                 
-                // Show dashboard toggle and hide login/register buttons
                 if (dashboardToggle) dashboardToggle.style.display = 'block';
                 document.querySelectorAll('.auth-button').forEach(btn => btn.style.display = 'none');
             } else {
-                // Hide dashboard toggle and show login/register buttons
                 if (dashboardToggle) dashboardToggle.style.display = 'none';
                 document.querySelectorAll('.auth-button').forEach(btn => btn.style.display = 'inline-block');
             }
@@ -691,7 +686,6 @@
         }
     };
     loadUserData();
-            
             const dashboardToggle = document.getElementById('dashboardToggle');
             const userDashboard = document.getElementById('userDashboard');
             const dashboardSections = document.querySelectorAll('.user-dashboard-section');
@@ -717,7 +711,6 @@
             }
         });
     }
-
             const profileForm = document.getElementById('profileForm');
             if (profileForm) {
                 profileForm.addEventListener('submit', async function (e) {
@@ -749,7 +742,6 @@
                 passwordForm.addEventListener('submit', async function (e) {
                     e.preventDefault();
                     const formData = new FormData(this);
-    
                     try {
                         const response = await fetch('/change-password', {
                             method: 'POST',
