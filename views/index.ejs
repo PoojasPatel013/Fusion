@@ -48,6 +48,23 @@
             padding: 0 2rem;
         }
 
+        .auth-buttons {
+        display: flex;
+        gap: 10px;
+    }
+
+    .auth-button {
+        padding: 8px 16px;
+        background-color: var(--accent-color);
+        color: var(--text-color);
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+    .auth-button:hover {
+        background-color: #e1b60e;
+    }
         .logo {
             font-size: 2rem; /* Increased font size for larger header */
             font-weight: 700;
@@ -329,6 +346,7 @@
             }
         }
 
+        
         .user-dashboard {
             position: fixed;
             top: 100px; 
@@ -449,7 +467,9 @@
         .dashboard-btn:hover {
             background-color: #e1b60e;
         }
-    </style>
+        
+    
+    </style> 
 </head>
 <body>
     <header>
@@ -496,10 +516,6 @@
                 <a href="/login" class="login-button">Login</a>
             <% } %>
         </div>
-
-        <button class="dashboard-toggle" id="dashboardToggle">
-            <i class="fas fa-user"></i>
-        </button>
     
         <div class="user-dashboard" id="userDashboard">
             <div class="user-dashboard-header">
@@ -508,8 +524,9 @@
             </div>
             <ul class="user-dashboard-menu">
                 <li><a href="/dashboard" class="active"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="/login" class="active"><i class= "fas fa-sign-in-alt"></i> Login</a></li>
                 <li><a href="/profile"><i class="fas fa-user"></i> Profile</a></li>
-                <li><a href="/account"><i class="fas fa-cog"></i> Account Settings</a></li>
+                <li><a href="#account"><i class="fas fa-cog"></i> Account Settings</a></li>
                 <li><a href="/logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
             </ul>
     </header>
@@ -605,7 +622,6 @@
         </div>
         <p>&copy; 2024 DesiFusion - Culinary Guide of India. All rights reserved.</p>
     </footer>
-
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const mobileMenuToggle = document.createElement('button');
@@ -653,25 +669,31 @@
             });
     
             const loadUserData = async () => {
-                try {
-                    const response = await fetch('/user');
-                    if (!response.ok) throw new Error('Failed to fetch user data');
-    
-                    const userData = await response.json();
-                    document.getElementById('userName').textContent = userData.name;
-                    document.getElementById('userAvatar').src = userData.avatar || '/assets/default-avatar.png';
-                    document.getElementById('name').value = userData.name;
-                    document.getElementById('email').value = userData.email;
-                    document.getElementById('bio').value = userData.bio;
-                } catch (error) {
-                    console.error('Error loading user data:', error);
-                    alert('Error loading user data. Please try again later.');
-                }
-            };
-    
+        try {
+            const response = await fetch('/user', { method: "GET" });
+            if (!response.ok) throw new Error('Failed to fetch user data');
+
+            const userData = await response.json();
+            if (userData) {
+                document.getElementById('userName').textContent = userData.name;
+                document.getElementById('userAvatar').src = userData.avatar || '/assets/default-avatar.png';
+                
+                // Show dashboard toggle and hide login/register buttons
+                if (dashboardToggle) dashboardToggle.style.display = 'block';
+                document.querySelectorAll('.auth-button').forEach(btn => btn.style.display = 'none');
+            } else {
+                // Hide dashboard toggle and show login/register buttons
+                if (dashboardToggle) dashboardToggle.style.display = 'none';
+                document.querySelectorAll('.auth-button').forEach(btn => btn.style.display = 'inline-block');
+            }
+        } catch (error) {
+            console.error('Error loading user data:', error);
+        }
+    };
+    loadUserData();
+            
             const dashboardToggle = document.getElementById('dashboardToggle');
             const userDashboard = document.getElementById('userDashboard');
-            const dashboardLinks = document.querySelectorAll('.user-dashboard-menu a');
             const dashboardSections = document.querySelectorAll('.user-dashboard-section');
     
             if (dashboardToggle) {
@@ -679,61 +701,23 @@
                     userDashboard.classList.toggle('open');
                 });
             }
-            const loadDashboardContent = async (targetId) => {
-                try {
-                    const response = await fetch(`/${targetId}`);
-                    if (!response.ok) throw new Error(`Failed to fetch ${targetId} data`);
-
-                    const data = await response.json();
-                    const targetSection = document.querySelector('.user-dashboard-content');
-
-                    if (data.content && targetSection) {
-                        targetSection.innerHTML = data.content;
-                    } else {
-                        console.warn('No content found in API response.');
-                        targetSection.innerHTML = `<p>No content available for ${targetId}</p>`;
-                    }
-                } catch (error) {
-                    console.error(`Error loading ${targetId} data:`, error);
-                    alert(`Error loading ${targetId} data. Please try again later.`);
-                }
-            };
-            dashboardLinks.forEach(link => {
-    link.addEventListener('click', async function (e) {
-        const targetId = this.getAttribute('href').substring(1);
-        if (targetId !== 'logout') {
-            e.preventDefault();
-            dashboardLinks.forEach(l => l.classList.remove('active'));
-            this.classList.add('active');
-
-            dashboardSections.forEach(section => {
-                section.classList.remove('active');
-                if (section.id === targetId) {
-                    section.classList.add('active');
-                }
-            });
-
-            await loadDashboardContent(targetId);
-        }
-    });
-});
-            const logoutLink = document.querySelector('a[href="/logout"]');
             if (logoutLink) {
-                logoutLink.addEventListener('click', async (e) => {
-                    e.preventDefault();
-                    try {
-                        const response = await fetch('/logout', { method: 'POST' });
-                        if (response.ok) {
-                            window.location.href = '/';
-                        } else {
-                            throw new Error('Logout failed');
-                        }
-                    } catch (error) {
-                        console.error('Error during logout:', error);
-                        alert('Logout failed. Please try again.');
-                    }
-                });
+        logoutLink.addEventListener('click', async (e) => {
+            e.preventDefault();
+            try {
+                const response = await fetch('/logout', { method: 'POST' });
+                if (response.ok) {
+                    window.location.href = '/';
+                } else {
+                    throw new Error('Logout failed');
+                }
+            } catch (error) {
+                console.error('Error during logout:', error);
+                alert('Logout failed. Please try again.');
             }
+        });
+    }
+
             const profileForm = document.getElementById('profileForm');
             if (profileForm) {
                 profileForm.addEventListener('submit', async function (e) {

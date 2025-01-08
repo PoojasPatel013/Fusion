@@ -85,20 +85,14 @@ app.post("/register", async (req, res) => {
     }
 });
 app.post('/login', async (req, res) => {
-    try {
-        const { email, password } = req.body;
-        const user = await User.findOne({ email });
-
-        if (!user || !(await user.matchPassword(password))) {
-            return res.status(400).send('Invalid email or password');
-        }
-
+    const { email, password } = req.body;
+    const user = await User.findOne({ email });
+    if (user && (await user.matchPassword(password))) {
         req.session.userId = user._id;
-        await user.updateLastLogin();
-        res.redirect('/profile');
-    } catch (error) {
-        console.error('Error during login:', error);
-        res.status(500).send('Internal server error');
+        console.log('Session set for user:', req.session.userId); // Debug
+        res.redirect('/dashboard');
+    } else {
+        res.status(400).send('Invalid email or password');
     }
 });
 
@@ -111,8 +105,16 @@ app.get('/logout', (req, res) => {
     });
 });
 
-app.get('/', (req, res) => {
-    res.render('index', { user: req.session.userId ? { id: req.session.userId } : null });
+app.get('/', async (req, res) => {
+    let user = null;
+    if (req.session.userId) {
+        try {
+            user = await User.findById(req.session.userId);
+        } catch (err) {
+            console.error('Error fetching user:', err);
+        }
+    }
+    res.render('index', { user: user ? user.toJSON() : null });
 });
 
 app.get('/search', (req, res) => {
@@ -234,6 +236,7 @@ app.get('/dashboard', isAuthenticated, async (req, res) => {
 });
 
 app.get('/profile', isAuthenticated, async (req, res) => {
+    console.log("profile req")
     try {
         const user = await User.findById(req.session.userId);
         if (!user) {
