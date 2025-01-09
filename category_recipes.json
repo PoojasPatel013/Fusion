@@ -12,7 +12,7 @@
       "Category": "vegetarian",
       "HealthinessPercentage": 85,
       "Suggestion": "Use less oil for an even healthier version.",
-      "ImageSource": ""
+      "ImageSource": "https://minimalistbaker.com/wp-content/uploads/2016/02/AMAZING-Chana-Masala-made-in-1-Pot-So-healthy-flavorful-and-delicious-vegan-glutenfree-chanamasala-recipe-minimalistbaker.jpg"
     },
     {
       "RecipeName": "Vegetable Biryani",
@@ -27,7 +27,7 @@
       "Category": "vegetarian",
       "HealthinessPercentage": 75,
       "Suggestion": "Use brown rice for added fiber and nutrients.",
-      "ImageSource": ""
+      "ImageSource": "https://madhurasrecipe.com/wp-content/uploads/2023/03/Veg-Biryani-Featured.jpg"
     },
     {
       "RecipeName": "Tofu Tikka Masala",
@@ -43,7 +43,7 @@
       "Category": "vegan",
       "HealthinessPercentage": 80,
       "Suggestion": "Add more vegetables for extra nutrients.",
-      "ImageSource": ""
+      "ImageSource": "https://biancazapatka.com/wp-content/uploads/2021/10/tikka-masala-tofu-720x1008.jpg"
     },
     {
       "RecipeName": "Vegetable Daal",
@@ -58,7 +58,7 @@
       "Category": "vegan",
       "HealthinessPercentage": 90,
       "Suggestion": "Already very healthy. Serve with brown rice for added fiber.",
-      "ImageSource": ""
+      "ImageSource": "https://www.foodie-trail.com/wp-content/uploads/2022/02/PHOTO-2022-01-20-14-55-18.jpg"
     },
     {
       "RecipeName": "Quinoa Upma",
@@ -73,7 +73,7 @@
       "Category": "gluten-free",
       "HealthinessPercentage": 95,
       "Suggestion": "Add nuts or seeds for extra protein and healthy fats.",
-      "ImageSource": ""
+      "ImageSource": "https://images.mrcook.app/recipe-image/0190c92f-befe-7b0c-9876-ebda5cd7bc64"
     },
     {
       "RecipeName": "Chicken Tikka",
@@ -87,7 +87,7 @@
       "Category": "gluten-free",
       "HealthinessPercentage": 85,
       "Suggestion": "Use skinless chicken breast for a leaner option.",
-      "ImageSource": ""
+      "ImageSource": "https://www.indianhealthyrecipes.com/wp-content/uploads/2022/06/chicken-tikka-kebab.jpg"
     },
     {
       "RecipeName": "Masala Omelette",
@@ -102,7 +102,7 @@
       "Category": "quick-meals",
       "HealthinessPercentage": 80,
       "Suggestion": "Use one whole egg and two egg whites for a lower-fat version.",
-      "ImageSource": "https://maunikagowardhan.co.uk/wp-content/uploads/2012/09/Masala-Omelette-32.jpg"
+      "ImageSource": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5WyLGZxnoqebr98xheTIT64sJFDAu1XGPWg&s"
     },
     {
       "RecipeName": "Kachumber Salad",
