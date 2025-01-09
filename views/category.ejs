@@ -123,6 +123,7 @@
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.5);
+            overflow-y: auto;
         }
 
         .modal-content {
@@ -132,25 +133,60 @@
             border-radius: 8px;
             max-width: 600px;
             position: relative;
+            display: flex;
+            flex-direction: column;
         }
-
+        .modal-image-container {
+            width: 100%;
+            max-height: 300px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+        .modal-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .modal-details {
+            display: flex;
+            flex-direction: column;
+        }
         .close-modal {
             position: absolute;
             top: 10px;
             right: 20px;
             font-size: 1.5rem;
             cursor: pointer;
+            z-index: 1;
         }
 
         .ingredients-list, .instructions-list {
             padding-left: 1.5rem;
+            margin-bottom: 1rem;
         }
 
+        @media (min-width: 768px) {
+            .modal-content {
+                flex-direction: row;
+            }
+
+            .modal-image-container {
+                width: 40%;
+                max-height: none;
+                margin-right: 2rem;
+                margin-bottom: 0;
+            }
+
+            .modal-details {
+                width: 60%;
+            }
+        }
         @media (max-width: 768px) {
             .recipe-grid {
                 grid-template-columns: 1fr;
             }
         }
+
     </style>
 </head>
 <body>
@@ -182,12 +218,16 @@
     <div id="recipeModal" class="recipe-modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal()">&times;</span>
-            <h2 id="modalTitle"></h2>
-            <img id="modalImage" src="/placeholder.svg" alt="" style="max-width: 100%; height: auto; margin-bottom: 1rem;">
-            <h3>Ingredients:</h3>
-            <ul id="modalIngredients" class="ingredients-list"></ul>
-            <h3>Instructions:</h3>
-            <ol id="modalInstructions" class="instructions-list"></ol>
+            <div class="modal-image-container">
+                <img id="modalImage" src="/assets" alt="">
+            </div>
+            <div class="modal-details">
+                <h2 id="modalTitle"></h2>
+                <h3>Ingredients:</h3>
+                <ul id="modalIngredients" class="ingredients-list"></ul>
+                <h3>Instructions:</h3>
+                <ol id="modalInstructions" class="instructions-list"></ol>
+            </div>
         </div>
     </div>
 
@@ -218,10 +258,12 @@
             });
 
             modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
         }
 
         function closeModal() {
             modal.style.display = 'none';
+            document.body.style.overflow= '';
         }
 
         window.onclick = function(event) {
