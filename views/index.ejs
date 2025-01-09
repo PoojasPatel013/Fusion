@@ -9,7 +9,7 @@
     <style>
         :root {
              --primary-color: #db380f; 
-             --secondary-color: #226230; 
+             --secondary-color: #989e25; 
             --accent-color: #f1c40f;
             --text-color: #3b3836;
             --bg-color: #f9f5f1;
@@ -41,7 +41,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 1200px;
+            max-width: 1300px;
             margin: 0 auto;
             padding: 0 2rem;
         }
@@ -260,7 +260,7 @@
         }
         footer {
             background: var(--secondary-color);
-            color: rgba(33, 13, 13, 0.926);
+            color: rgba(0, 0, 0, 0.926);
             text-align: center;
             padding: 2rem 0;
         }
@@ -368,7 +368,7 @@
             top: 100px; 
             right: -300px;
             width: 300px;
-            height: calc(120vh - 90px); 
+            height: calc(100vh - 90px); 
             background-color: var(--sidebar-bg);
             color: var(--sidebar-text);
             transition: right 0.3s ease;
@@ -378,9 +378,9 @@
 
         .dashboard-toggle {
             position: fixed;
-            top: 100px;
+            top: 90px;
             right: 10px;
-            background-color: var(--sidebar-bg);
+            background-color: var(--secondary-color);
             color: var(--sidebar-text);
             border: none;
             padding: 10px;
@@ -486,7 +486,6 @@
     </style> 
 </head>
 <body>
-    {}
     <header>
         <div class="header-content">
             <a href="/" class="logo">DesiFusion</a>
@@ -532,9 +531,34 @@
                     </div>
                 </div>
                 <% } %>
+
+                <% if (!user) { %>
+                    <div class="auth-buttons">
+                        <a href="/login" class="auth-button">Login</a>
+                        <a href="/register" class="auth-button">Register</a>
+                    </div>
+                <% } else { %>
+                    <button id="dashboardToggle" class="dashboard-toggle">
+                        <i class="fas fa-user"></i>
+                    </button>
+                <% } %>
         </div>        
     </header>
 
+    <% if (user) { %>
+        <div id="userDashboard" class="user-dashboard">
+            <div class="user-dashboard-header">
+                <img src="<%= user.avatar || '/assets/default-avatar.png' %>" alt="User Avatar" id="userAvatar">
+                <h2 id="userName"><%= user.username %></h2>
+            </div>
+            <ul class="user-dashboard-menu">
+                <li><a href="/dashboard" class="active"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="/profile"><i class="fas fa-user"></i> Profile</a></li>
+                <li><a href="#account"><i class="fas fa-cog"></i> Account Settings</a></li>
+                <li><a href="#" id="logoutLink"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </div>
+    <% } %>
     <main>
         <section class="hero">
             <div class="hero-content">
@@ -552,7 +576,7 @@
                 </form>
             </div>
         </section>
-            <div class="<%= user ? '' : 'restricted-content' %>">
+            <!-- <div class="<%= user ? '' : 'restricted-content' %>">
                 <div class="user-dashboard" id="userDashboard">
                     <div class="user-dashboard-header">
                         <img src="<%= user ? user.avatar : '' %>" alt="User Avatar" id="userAvatar">
@@ -565,7 +589,7 @@
                         <li><a href="#account"><i class="fas fa-cog"></i> Account Settings</a></li>
                         <li><a href="/logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
                     </ul>
-            </div>
+            </div> -->
             <section class="features">
                 <div class="feature">
                     <i class="fas fa-utensils"></i>
@@ -663,6 +687,32 @@
                     this.reset();
                 });
             }
+            const dashboardToggle = document.getElementById('dashboardToggle');
+            const userDashboard = document.getElementById('userDashboard');
+            const logoutLink = document.getElementById('logoutLink');
+
+            if (dashboardToggle && userDashboard) {
+                dashboardToggle.addEventListener('click', () => {
+                    userDashboard.classList.toggle('open');
+                });
+            }
+
+            if (logoutLink) {
+                logoutLink.addEventListener('click', async (e) => {
+                    e.preventDefault();
+                    try {
+                        const response = await fetch('/logout', { method: 'POST' });
+                        if (response.ok) {
+                            window.location.href = '/';
+                        } else {
+                            throw new Error('Logout failed');
+                        }
+                    } catch (error) {
+                        console.error('Error during logout:', error);
+                        alert('Logout failed. Please try again.');
+                    }
+                });
+            }
             const backToTop = document.createElement('button');
             backToTop.innerHTML = '<i class="fas fa-arrow-up"></i>';
             backToTop.classList.add('back-to-top');
@@ -697,31 +747,8 @@
         }
     };
     loadUserData();
-            const dashboardToggle = document.getElementById('dashboardToggle');
-            const userDashboard = document.getElementById('userDashboard');
-            const dashboardSections = document.querySelectorAll('.user-dashboard-section');
-    
-            if (dashboardToggle) {
-                dashboardToggle.addEventListener('click', () => {
-                    userDashboard.classList.toggle('open');
-                });
-            }
-            if (logoutLink) {
-        logoutLink.addEventListener('click', async (e) => {
-            e.preventDefault();
-            try {
-                const response = await fetch('/logout', { method: 'POST' });
-                if (response.ok) {
-                    window.location.href = '/';
-                } else {
-                    throw new Error('Logout failed');
-                }
-            } catch (error) {
-                console.error('Error during logout:', error);
-                alert('Logout failed. Please try again.');
-            }
-        });
-    }
+            
+        
             const profileForm = document.getElementById('profileForm');
             if (profileForm) {
                 profileForm.addEventListener('submit', async function (e) {
@@ -777,12 +804,12 @@
                 document.getElementById('dashboard').classList.add('active');
             }
         }
-        <% if (!user) { %>
+    );
+    <% if (!user) { %>
         document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('main').classList.add('restricted-content');
         });
     <% } %>
-    );
     </script>
 </body>
 </html>
