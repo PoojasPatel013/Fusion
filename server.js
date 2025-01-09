@@ -6,8 +6,6 @@ const bcryptjs = require('bcryptjs');
 const User = require('./models/userModel');
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
-const multer = require('multer');
-
 const PORT = 3000;
 const app = express();
 const dataDir = path.resolve(__dirname, 'one_ingredient_recipes'); 
@@ -41,7 +39,6 @@ const connectToDB = async () => {
         setTimeout(connectToDB, 5000);
     }
 };
-
 connectToDB();
 const isAuthenticated = (req, res, next) => {
     if (req.session.userId) {
@@ -50,7 +47,6 @@ const isAuthenticated = (req, res, next) => {
         res.redirect('/login');
     }
 };
-
 const loadData = (region) => {
     const regionDir = path.join(dataDir, region); 
     const filePath = path.join(regionDir, `${region.toLowerCase()}_recipes.json`); 
@@ -90,7 +86,7 @@ app.post('/login', async (req, res) => {
     const user = await User.findOne({ email });
     if (user && (await user.matchPassword(password))) {
         req.session.userId = user._id;
-        console.log('Session set for user:', req.session.userId); // Debug
+        console.log('Session set for user:', req.session.userId); 
         res.redirect('/dashboard');
     } else {
         res.status(400).send('Invalid email or password');
@@ -158,7 +154,15 @@ app.get('/api/recipes', (req, res) => {
 app.get('/login', (req, res) => {
     res.render('login.ejs');
 });
-
+app.post('/logout', (req, res) => {
+    req.session.destroy((err) => {
+        if (err) {
+            console.error('Error destroying session:', err);
+        }
+        res.clearCookie('connect.sid'); 
+        res.json({ success: true, message: 'Logged out successfully' });
+    });
+});
 app.get('/register', (req, res) => {
     res.render('register.ejs');
 });
