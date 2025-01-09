@@ -6,6 +6,7 @@ const bcryptjs = require('bcryptjs');
 const User = require('./models/userModel');
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
+const multer = require('multer');
 
 const PORT = 3000;
 const app = express();
@@ -224,17 +225,52 @@ app.get('/user', isAuthenticated, async (req, res) => {
 
 app.get('/dashboard', isAuthenticated, async (req, res) => {
     try {
+      const user = await User.findById(req.session.userId);
+      if (!user) {
+        return res.status(404).send('User not found');
+      }
+      console.log('User object:', user);
+      const avatarOptions = [
+        'https://tools-api.webcrumbs.org/image-placeholder/120/120/avatars/1',
+        'https://tools-api.webcrumbs.org/image-placeholder/120/120/avatars/2',
+        'https://tools-api.webcrumbs.org/image-placeholder/120/120/avatars/3',
+        'https://tools-api.webcrumbs.org/image-placeholder/120/120/avatars/4',
+        'https://tools-api.webcrumbs.org/image-placeholder/120/120/avatars/5',
+        'https://tools-api.webcrumbs.org/image-placeholder/120/120/avatars/6'
+      ];
+  
+      res.render('dashboard', { user: user.toObject(), avatarOptions });
+    } catch (error) {
+      console.error('Error loading dashboard:', error);
+      res.status(500).send('Internal server error');
+    }
+  });
+
+  app.get('/', (req, res) => {
+    res.render('dashboard', { user: User, avatarOptions: avatarOptions });
+  });
+  
+  app.post('/update-avatar', isAuthenticated, async (req, res) => {
+    try {
         const user = await User.findById(req.session.userId);
         if (!user) {
-            return res.status(404).send('User not found');
+            return res.status(404).json({ error: 'User not found' });
         }
-        res.render('dashboard', { user });
+        if (req.body.avatarOption) {
+            user.avatar = req.body.avatarOption;
+        } else {
+            return res.status(400).json({ error: 'No avatar provided' });
+        }
+        await user.save();
+        console.log('User avatar updated:', user.avatar);
+        res.redirect('/dashboard');
     } catch (error) {
-        console.error('Error loading dashboard:', error);
-        res.status(500).send('Internal server error');
+        console.error('Error updating avatar:', error);
+        res.status(500).json({ error: 'Internal server error' });
     }
 });
 
+   
 app.get('/profile', isAuthenticated, async (req, res) => {
     console.log("profile req")
     try {
@@ -302,6 +338,7 @@ categories.forEach(category => {
         res.render('category', { category, recipes });
     });
 });
+ 
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
