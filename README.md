@@ -6,9 +6,14 @@
 
 # DESIFUSION
 
-**Cuisine Guide of India**
-
 Welcome to **DESIFUSION** – your passport to the vibrant and flavorful world of Indian cuisine! We're here to take you on a delicious journey through India's diverse culinary landscape, from the snow-capped mountains of the North to the sun-kissed shores of the South, and from the bold flavors of the East to the regal feasts of the West.
+
+<div style="text-align: center;">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" width="400">
+    <img alt="Icon" src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" width="400">
+  </picture>
+</div>
 
 ## What We Offer
 
