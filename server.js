@@ -17,7 +17,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const dbURL = 'mongodb://127.0.0.1:27017/fusion';
+const dbURL = 'mongodb+srv://poojaspatel1375:pooja1375@cluster0.9es1p.mongodb.net/fusion?retryWrites=true&w=majority';
 
 app.use(session({
     secret: 'your_session_secret',
