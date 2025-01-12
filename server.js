@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
@@ -6,7 +7,7 @@ const bcryptjs = require('bcryptjs');
 const User = require('./models/userModel');
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const app = express();
 const dataDir = path.resolve(__dirname, 'one_ingredient_recipes'); 
 
@@ -17,7 +18,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const dbURL = 'mongodb+srv://poojaspatel1375:pooja1375@cluster0.9es1p.mongodb.net/fusion?retryWrites=true&w=majority';
+const dbURL = process.env.DB_URL;
 
 app.use(session({
     secret: 'your_session_secret',
@@ -71,7 +72,7 @@ app.post("/register", async (req, res) => {
             email,
             password,
             bio: "Welcome to Fusion!",
-            avatar: "/assets/default-avatar.png"
+            avatar: ""
         });
         await newUser.save();
         req.session.userId = newUser._id;

@@ -1,3 +1,4 @@
 node_modules/
 .hintrc
 package-lock.json
+.env
