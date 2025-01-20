@@ -39,7 +39,7 @@ Are you passionate about food? We invite you to share your family's cherished re
 
 Got questions, suggestions, or ideas for collaboration? We'd love to hear from you!
 
-- **Email:** contact@desifusion.com
+- **Email:** poojaspatel013@gmail.com
 
 Join us in celebrating India's incredible culinary journey—one plate at a time!
 

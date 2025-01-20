@@ -3,7 +3,7 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 const mongoose = require('mongoose');
-const bcryptjs = require('bcryptjs');
+const bcrypt = require('bcryptjs');
 const User = require('./models/userModel');
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: true }));
 const dbURL = process.env.DB_URL;
 
 app.use(session({
-    secret: 'your_session_secret',
+    secret: 'pyq',
     resave: false,
     saveUninitialized: false,
     store: MongoStore.create({ mongoUrl: dbURL }),
