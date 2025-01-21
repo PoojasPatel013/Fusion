@@ -31,15 +31,112 @@ India's culinary story is as diverse as its people. At DESIFUSION, we blend trad
 2. **Cook:** Follow easy, step-by-step instructions to bring dishes to life.
 3. **Discover:** Travel back in time with our collection of royal recipes.
 
+## Tech Stack
+### Backend
+- *Node.js & Express*: Powers the backend infrastructure, handles routing, user sessions, and recipe management.
+- *MongoDB with Mongoose*: Stores recipe data, user profiles, and community content with optimized query capabilities.
+
+### Frontend
+- *EJS (Embedded JavaScript)*: Dynamic rendering of recipes and cultural information with reusable components.
+- *Responsive Design*: Ensures accessibility across all device types.
+
+### Packages Used
+- *Express-session*: Manages user sessions and server-side session data.
+- *Mongo-store*: Stores session data in MongoDB.
+- *Mongoose*: Provides schema validation and data modeling for MongoDB.
+- *Bcryptjs*: Secures user passwords with the bcrypt hashing algorithm.
+- *Dotenv*: Loads environment variables from a .env file.
+
+## Installation
+
+### Prerequisites
+- *Node.js* (>= 14.x)
+- *MongoDB* (local instance or cloud-based like MongoDB Atlas)
+- *npm* (Node Package Manager)
+
+### Setup
+
+#### Clone the Repository
+bash
+git clone https://github.com/PoojasPatel013/DesiFusion.git
+cd DesiFusion
+
+
+#### Backend Setup
+
+1. Navigate to the backend folder:
+   bash
+   cd backend
+   
+2. Install dependencies:
+   bash
+   npm install
+   
+3. Configure environment variables in a .env file:
+   env
+   PORT=5000
+   MONGO_URI=your_mongodb_connection_string
+   
+4. Start the backend server:
+   bash
+   npm run start
+   
+
+#### Frontend Setup
+
+1. Navigate to the root folder:
+   bash
+   cd /root
+   
+2. Install dependencies:
+   bash
+   npm install
+   
+3. Start the backend development server:
+   bash
+   npm run start
+   
+
+## Usage
+
+1. Explore regional recipes, royal collections, and cultural stories.
+2. Login to access community features and submit recipes.
+3. Backend server will be running on http://localhost:5000.
+
+## Folder Structure
+
+
+DesiFusion
+|
+|── controllers
+│── models
+│__ one_ingredient_recipes
+│── server.js
+├── views
+│   ├── js
+│   │── index.ejs
+│__ public
+│__ package.json
+│__ category_recipes.json
+|__ .env
+└── README.md
+
+
+## Contributions
+
+Contributions are welcome! Please fork the repository and submit a pull request for any feature requests or bug fixes.
+
+
 ## Join Our Community
 
 Are you passionate about food? We invite you to share your family's cherished recipes, regional specialties, or simply drop us feedback to help make DESIFUSION even more delightful!
 
-## Let's Connect!
+## Contact
 
-Got questions, suggestions, or ideas for collaboration? We'd love to hear from you!
+For any questions or feedback, please reach out at:
 
-- **Email:** poojaspatel013@gmail.com
+- *Email*: [poojaspatel1375@gmail.com]
+- *GitHub*: [PoojasPatel013]
 
 Join us in celebrating India's incredible culinary journey—one plate at a time!
 
