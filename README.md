@@ -52,45 +52,45 @@ Easily browse recipes, cooking tips, and regional specialties.
 ### **Setup**  
 
 #### Clone the Repository
-```bash
+```
 git clone https://github.com/PoojasPatel013/DesiFusion.git
 cd DesiFusion
-
+```
 
 #### Backend Setup
 
 1. Navigate to the backend folder:
-   bash
+  ``` bash
    cd backend
-   
+   ```
 2. Install dependencies:
-   bash
+   ```
    npm install
-   
+   ```
 3. Configure environment variables in a .env file:
-   env
+   ```.env
    PORT=5000
    MONGO_URI=your_mongodb_connection_string
-   
+   ```
 4. Start the backend server:
-   bash
+  ``` bash
    npm run start
-   
+   ```
 
 #### Frontend Setup
 
 1. Navigate to the root folder:
-   bash
+  ``` bash
    cd /root
-   
+   ```
 2. Install dependencies:
-   bash
+   ```bash
    npm install
-   
+   ```
 3. Start the backend development server:
-   bash
+   ```bash
    npm run start
-   
+   ```
 
 ## Usage
 
@@ -99,7 +99,7 @@ cd DesiFusion
 3. Backend server will be running on http://localhost:5000.
 
 ## Folder Structure
-
+```
 
 DesiFusion
 |
@@ -116,7 +116,7 @@ DesiFusion
 |__ .env
 └── README.md
 
-
+```
 ## Contributions
 
 Contributions are welcome! Please fork the repository and submit a pull request for any feature requests or bug fixes.
