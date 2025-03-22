@@ -7,7 +7,7 @@ DESIFUSION takes you on a delicious journey through India's diverse culinary lan
 
 ---
 
-## **Features**  
+## **Features**.
 
 ### 1. **Regional Flavors Uncovered**  
 Explore authentic recipes and cooking traditions from every region of India.  
@@ -23,7 +23,7 @@ Easily browse recipes, cooking tips, and regional specialties.
 
 ---
 
-## **Tech Stack**  
+## **Tech Stack**.  
 
 ### **Backend**  
 - **Node.js & Express**: Backend infrastructure, routing, user sessions, and recipe management.  
