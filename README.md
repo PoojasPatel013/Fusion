@@ -23,7 +23,7 @@ Easily browse recipes, cooking tips, and regional specialties.
 
 ---
 
-## **Tech Stack**  
+## **Tech Stack**.  
 
 ### **Backend**  
 - **Node.js & Express**: Backend infrastructure, routing, user sessions, and recipe management.  
