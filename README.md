@@ -5,11 +5,11 @@ DESIFUSION takes you on a delicious journey through India's diverse culinary lan
 
 ![DesiFusion Banner](https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
 
----
+----
 
 ## **Features**
 
-### 1. **Regional Flavors Uncovered**  
+### 1. **Regional Flavors Uncovered**  .
 Explore authentic recipes and cooking traditions from every region of India.  
 
 ### 2. **Royal Recipes**  
