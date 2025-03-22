@@ -9,7 +9,7 @@ DESIFUSION takes you on a delicious journey through India's diverse culinary lan
 
 ## **Features**.
 
-### 1. **Regional Flavors Uncovered**  
+### 1. **Regional Flavors Uncovered**  .
 Explore authentic recipes and cooking traditions from every region of India.  
 
 ### 2. **Royal Recipes**  
